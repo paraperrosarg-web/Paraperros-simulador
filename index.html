@@ -3,196 +3,296 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Para Perros — Accesorios con estilo</title>
-<meta name="description" content="Arneses, collares, correas, chapitas personalizadas y juguetes para perros. Diseños exclusivos hechos con amor en Argentina.">
-<link rel="icon" href="logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<title>Personalizá tu chapita | Para Perros</title>
+<meta name="description" content="Armá la chapita de tu perro: forma, tamaño, color, tipografía y texto, con vista previa al instante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0}
-.pp{--terracota:#be6336;--terracota-dark:#a5522a;--mustard:#e4a936;--sage:#77a399;--sage-dark:#5f8880;--mauve:#ba7e75;--ink:#1B1712;--ink-soft:#6B6155;--soft:#FBF7F0;--line:rgba(27,23,18,.12);--fresia:repeating-linear-gradient(90deg,#8B3A52 0 7px,#efb4c2 7px 14px);--marea:repeating-linear-gradient(90deg,#3F7F89 0 7px,#8fd3da 7px 14px);--gris:repeating-linear-gradient(90deg,#4a4745 0 7px,#a9a5a2 7px 14px);font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden;box-sizing:border-box;-webkit-font-smoothing:antialiased}
-.pp *{box-sizing:border-box}
-.pp img{max-width:100%;display:block}
-.nav a,.foot a{color:inherit}
-.pp h1,.pp h2,.pp h3,.pp h4,.pp p{margin:0}
-.serif{font-family:'Fraunces',Georgia,serif;font-weight:900;letter-spacing:-.01em}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.stripe-bar{height:12px;background:repeating-linear-gradient(90deg,#77a399 0 48px,#e4a936 48px 96px,#ba7e75 96px 144px,#be6336 144px 192px)}
-.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:6px;padding-bottom:6px}
-.logo{height:68px;width:68px}
-.nav{display:flex;gap:26px;font-weight:600;font-size:.92rem;color:var(--ink-soft)}
-.nav a{text-decoration:none;padding:10px 0}.nav a:hover{color:var(--terracota-dark)}
-.btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;font-weight:700;font-size:.92rem;text-decoration:none;padding:13px 22px;min-height:46px;border:2px solid transparent}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-main{background:var(--mustard);color:var(--ink)}.btn-main:hover{background:var(--terracota);color:#fff}
-.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--terracota)}
-.btn-ghost{border-color:var(--ink);color:var(--ink);padding:10px 18px;min-height:42px;font-size:.86rem}.btn-ghost:hover{background:var(--ink);color:#fff}
-.hero{background:var(--soft);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:64px}
-.eyebrow{display:inline-block;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota-dark);margin-bottom:14px}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.04}
-.hero h1 em{font-style:normal;color:var(--terracota)}
-.pp .lead{font-size:1.08rem;line-height:1.65;color:var(--ink-soft);max-width:520px;margin:20px 0 32px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.frame{border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 24px 50px -24px rgba(27,23,18,.45);border:8px solid #fff;transform:rotate(1.5deg)}
-.frame img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.prints{display:flex;height:34px}.prints i{flex:1}.prints .f{background:var(--fresia)}.prints .m{background:var(--marea)}.prints .g{background:var(--gris)}
-.sec{padding:76px 0}
-.head{text-align:center;max-width:660px;margin:0 auto 44px}
-.head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1}.head p{color:var(--ink-soft);line-height:1.65;margin-top:14px}
-.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.feat{background:var(--soft);border-radius:20px;padding:26px 22px}
-.fi{width:50px;height:50px;border-radius:14px;color:#fff;display:grid;place-items:center;margin-bottom:16px}.fi svg{width:26px;height:26px}
-.feat h3{font-size:1.02rem;margin-bottom:8px}.feat p{color:var(--ink-soft);font-size:.92rem;line-height:1.6}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
-.media{position:relative;aspect-ratio:4/4.2;background:var(--soft);overflow:hidden}
-.media img{width:100%;height:100%;object-fit:cover}
-.tag{position:absolute;top:14px;left:14px;background:var(--terracota);color:#fff;font-weight:700;font-size:.74rem;padding:6px 12px;border-radius:999px}
-.body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:1.12rem;line-height:1.3}.card p{color:var(--ink-soft);font-size:.92rem;line-height:1.55;flex:1;margin-bottom:10px}
-.card .btn{align-self:flex-start}
-.talles{max-width:1160px;margin:0 auto;padding:0 24px}
-.size-wrap{background:var(--soft);border-radius:24px;padding:22px;overflow-x:auto}
-table.size{width:100%;border-collapse:separate;border-spacing:0 8px;min-width:640px}
-table.size th{font-weight:700;font-size:.85rem;color:#fff;text-align:center;padding:12px 8px;border-radius:10px}
-table.size th.blank{background:transparent}
-table.size th.s{background:var(--sage-dark)}table.size th.m{background:var(--mustard);color:var(--ink)}table.size th.l{background:#9A5F57}table.size th.xl{background:var(--terracota-dark)}
-table.size td{background:#fff;padding:12px 10px;font-size:.85rem;text-align:center}
-table.size td:first-child{text-align:left;font-weight:700;font-size:.8rem;border-radius:10px 0 0 10px;white-space:nowrap}
-table.size td:nth-child(2){text-align:left;color:var(--ink-soft);font-size:.78rem}
-table.size td:last-child{border-radius:0 10px 10px 0}
-.note{display:flex;gap:20px;margin-top:18px;flex-wrap:wrap;align-items:center}
-.note .box{background:var(--mustard);border-radius:14px;padding:14px 16px;font-size:.86rem;line-height:1.5;flex:1;min-width:240px}
-.note .how{flex:1;min-width:220px;font-size:.84rem;color:var(--ink-soft);line-height:1.5}
-.tags-sec{background:var(--ink);color:#fff}
-.tags-sec .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
-.tags-sec h2{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1}
-.tags-sec p.t{color:rgba(255,255,255,.78);line-height:1.7;margin:16px 0 26px}
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.trio img{aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:16px}
-.trio img:nth-child(2){transform:translateY(22px)}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.gal figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:3/4}
-.gal img{width:100%;height:100%;object-fit:cover}
-.cta{background:var(--sage);color:#fff;text-align:center}
-.cta h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.1;max-width:720px;margin:0 auto 14px}
-.cta p{max-width:560px;margin:0 auto 28px;line-height:1.65}
-.foot{background:var(--soft);padding:48px 0 30px}
-.foot .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
-.foot .logo{height:84px;width:84px}.foot p{margin-top:10px;color:var(--ink-soft);max-width:300px;line-height:1.55;font-size:.92rem}
-.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.94rem}.foot a{text-decoration:none}.foot a:hover{color:var(--terracota-dark)}
-.foot h4{margin-bottom:12px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota-dark)}
-.copy{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;font-size:.82rem;color:var(--ink-soft);width:100%}
-.float{position:fixed;right:18px;bottom:18px;z-index:40;background:#25a244;color:#fff;border-radius:999px;display:flex;align-items:center;gap:10px;padding:13px 20px;font-weight:700;text-decoration:none;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
-.float svg{width:22px;height:22px}.float:hover{background:#1b8a37}
-@media(max-width:980px){.hero .wrap,.tags-sec .wrap{grid-template-columns:1fr}.feats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.nav{display:none}.frame{max-width:420px;margin:0 auto}}
-@media(max-width:620px){.sec{padding:54px 0}.wrap,.talles{padding:0 16px}.feats,.grid,.gal{grid-template-columns:1fr}.logo{height:54px;width:54px}.top .btn span{display:none}.top .btn{padding:12px}.float span{display:none}.float{padding:14px}.hero .wrap{padding-top:34px}.trio{grid-template-columns:1fr 1fr 1fr;gap:8px}}
+@font-face{font-family:'PP harland';src:url(fonts/harland.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP shyness';src:url(fonts/shyness.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP silverkids';src:url(fonts/silverkids.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP sundaybest';src:url(fonts/sundaybest.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP vogue';src:url(fonts/vogue.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP waltograph';src:url(fonts/waltograph.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP hoodson';src:url(fonts/hoodson.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP keepon';src:url(fonts/keepon.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP arialblack';src:url(fonts/arialblack.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP elephant';src:url(fonts/elephant.woff2) format('woff2');font-display:block}
+
+:root{
+  --terracota:#be6336; --terracota-dark:#a5522a; --mustard:#e4a936;
+  --sage:#77a399; --sage-dark:#5f8880; --ink:#1B1712; --ink-soft:#6B6155;
+  --paper:#FFFFFF; --paper-soft:#FBF7F0; --line:rgba(27,23,18,0.12);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;font-weight:700}
+.brand-script{font-family:'Fraunces',serif;font-weight:900;letter-spacing:-0.01em}
+.stripe-bar{height:12px;width:100%;background:linear-gradient(90deg,#d16a40 0 8.33%,#5ea69b 8.33% 16.66%,#e3a885 16.66% 25%,#d88355 25% 33.33%,#e4a839 33.33% 41.66%,#b3cbcc 41.66% 50%,#ca7e75 50% 58.33%,#e3a885 58.33% 66.66%,#5ea69b 66.66% 75%,#d16a40 75% 83.33%,#e4a839 83.33% 91.66%,#b3cbcc 91.66% 100%)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 28px;border-bottom:1px solid var(--line)}
+.top img{height:96px;width:auto}
+.back{color:var(--terracota-dark);font-weight:700;font-size:.9rem;text-decoration:none}
+.back:hover{color:var(--ink)}
+.field{margin-top:4px}
+.field label,.lbl-up{font-size:.72rem;color:var(--ink-soft);font-weight:700;text-transform:uppercase;letter-spacing:.03em;display:block;margin-bottom:7px}
+.field input[type="text"]{width:100%;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-family:inherit;font-size:.9rem;background:var(--paper-soft);color:var(--ink)}
+.field input:focus{outline:2px solid var(--terracota);outline-offset:1px}
+.cz{max-width:1180px;margin:0 auto;padding:40px 28px 70px}
+.cz-head h1{font-size:clamp(1.9rem,3vw,2.5rem);line-height:1.15}
+.cz-head p{margin:10px 0 0;color:var(--ink-soft);font-size:1rem;line-height:1.55;max-width:58ch}
+.cz-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:start;margin-top:28px}
+.cz-stage-wrap{position:sticky;top:16px}
+.cz-stage{background-color:#F3EDE2;background-image:radial-gradient(rgba(27,23,18,.1) 1.2px,transparent 1.2px);background-size:18px 18px;border:1px solid var(--line);border-radius:28px;padding:34px 24px 26px;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.cz-faces{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;align-items:flex-end}
+.cz-face{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cz-face-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+.cz-meta{font-size:.82rem;color:var(--ink-soft);text-align:center;line-height:1.5;margin:0}
+.cz-disclaimer{margin:12px 4px 0;font-size:.74rem;color:var(--ink-soft);line-height:1.5}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px 18px 20px;margin-bottom:14px}
+.step-title{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;margin:0 0 14px}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:10px}
+.opts.wide{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.opt{border:2px solid var(--line);background:var(--paper);border-radius:14px;padding:10px 6px;min-height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:600;font-size:.78rem;color:var(--ink)}
+.opt:hover{border-color:var(--ink-soft)}
+.opt.selected{border-color:var(--ink);background:var(--paper-soft);box-shadow:0 0 0 1px var(--ink)}
+.opt small{font-weight:500;color:var(--ink-soft);font-size:.72rem}
+.opt .fsample{font-size:1.2rem;line-height:1.1;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:2px 4px}
+.swatches{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.swatch{width:44px;height:44px;border-radius:50%;border:2px solid rgba(27,23,18,.18);padding:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.swatch.selected{outline:3px solid var(--ink);outline-offset:3px}
+.picked{margin:10px 0 0;font-size:.8rem;color:var(--ink-soft)}
+.picked b{color:var(--ink)}
+.two-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.warn{margin-top:12px;background:#FBEDE7;border:1px solid var(--terracota);color:var(--terracota-dark);border-radius:12px;padding:10px 12px;font-size:.8rem;font-weight:600;line-height:1.45}
+.warn[hidden]{display:none}
+.cz-summary{background:var(--paper-soft);border:1px solid var(--line);border-radius:20px;padding:20px}
+.cz-summary h2{font-size:1.1rem;margin-bottom:12px}
+.cz-summary dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.84rem}
+.cz-summary dt{color:var(--ink-soft);font-weight:500}
+.cz-summary dd{margin:0;font-weight:600;text-align:right;word-break:break-word}
+.actions{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border:none;border-radius:999px;padding:12px 22px;font-weight:700;font-size:.92rem;text-decoration:none}
+.btn-main{background:var(--mustard);color:var(--ink)}
+.btn-main:hover{background:var(--terracota);color:#fff}
+.btn-wa{background:#1B7F43;color:#fff}
+.btn-wa:hover{background:#146534}
+.btn-ghost{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--terracota-dark);color:var(--terracota-dark)}
+.btn.done{background:#3F6860;color:#fff}
+.cz-note{margin:12px 0 0;font-size:.76rem;color:var(--ink-soft);line-height:1.5}
+.how{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:.8rem;color:var(--ink-soft);line-height:1.55}
+.how b{color:var(--ink)}
+@media (max-width:900px){.cz-grid{grid-template-columns:1fr}.cz-stage-wrap{position:static}.cz{padding:28px 16px 50px}.top{padding:8px 16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<div class="pp">
 <div class="stripe-bar"></div>
-<div class="top"><div class="wrap">
- <a href="#inicio" aria-label="Para Perros, inicio"><img class="logo" src="logo.svg" alt="Para Perros"></a>
- <div class="nav"><a href="#productos">Productos</a><a href="#talles">Talles</a><a href="#chapitas">Chapitas</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></div>
- <a class="btn btn-main" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20sus%20productos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"></path></svg><span>Escribinos</span></a>
-</div></div>
+<header class="top">
+  <img src="img/891223ab0153f6ff6c684853f0afcedb.svg" alt="Para Perros">
+  <a class="back" href="https://paraperros.com.ar">← Volver a la tienda</a>
+</header>
 
-<div class="hero" id="inicio"><div class="wrap">
- <div>
-  <span class="eyebrow">Accesorios para perros · Diseños exclusivos</span>
-  <h1 class="serif">Tu perro se merece lo mejor, <em>con estilo.</em></h1>
-  <p class="lead">Arneses, collares, correas y chapitas con diseños exclusivos, pensados para que cada paseo sea más seguro, más cómodo y con mucho estilo. Confeccionados con amor, uno por uno.</p>
-  <div class="ctas"><a class="btn btn-dark" href="#productos">Ver productos</a><a class="btn btn-main" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20precios" target="_blank" rel="noopener">Consultar precios</a></div>
- </div>
- <div class="frame"><img src="autoDuo.webp" alt="Dos golden retriever con arneses Para Perros"></div>
-</div></div>
-<div class="prints" aria-hidden="true"><i class="f"></i><i class="m"></i><i class="g"></i></div>
+<main class="cz">
+  <div class="cz-head">
+    <h1 class="brand-script">Personalizá tu chapita</h1>
+    <p>Elegí forma, tamaño, colores y tipografía. La vista previa cambia al instante. Cuando te guste, copiá el resumen y cargalo al hacer tu compra, o mandanoslo por WhatsApp.</p>
+  </div>
 
-<div class="sec"><div class="wrap">
- <div class="head"><span class="eyebrow">Por qué elegirnos</span><h2 class="serif">Pensado para ellos, hecho para durar</h2></div>
- <div class="feats">
-  <div class="feat"><div class="fi" style="background:#77a399"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8z"></path></svg></div><h3>Diseño ergonómico</h3><p>Pensado para el cuerpo de tu perro: cómodo para él y con más control para vos en cada paseo.</p></div>
-  <div class="feat"><div class="fi" style="background:#be6336"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 18.5 5.5"></path><ellipse cx="18.6" cy="5.4" rx="1" ry="2.5" transform="rotate(45 18.6 5.4)"></ellipse><path d="M19.8 7.2c2.2 2.4-.2 5.2-3 5.6-2.8.4-3.6 3-2.6 5.2"></path></svg></div><h3>Confección artesanal</h3><p>Cada pieza se cose con dedicación, una por una. Lo notás en los detalles y en la terminación.</p></div>
-  <div class="feat"><div class="fi" style="background:#e4a936;color:#1B1712"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 7.7 8 9 4.6-1.3 8-4.5 8-9V6z"></path><path d="m9 12 2 2 4-4"></path></svg></div><h3>Resistencia total</h3><p>Cintas de poliéster y herrajes reforzados para que aguanten los tirones y el uso de todos los días.</p></div>
-  <div class="feat"><div class="fi" style="background:#ba7e75"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg></div><h3>Atención personalizada</h3><p>Te ayudamos por WhatsApp a elegir el talle justo, para que lo compres una sola vez y te quede perfecto.</p></div>
- </div>
-</div></div>
+  <div class="cz-grid">
+    <div class="cz-stage-wrap">
+      <div class="cz-stage">
+        <div class="cz-faces" id="faces"></div>
+        <p class="cz-meta" id="meta"></p>
+      </div>
+      <p class="cz-disclaimer">La vista previa usa fotos de chapitas reales. Cada chapita es artesanal: el dibujo del color puede variar levemente de una a otra, y el grabado final puede verse un poco distinto.</p>
+    </div>
 
-<div class="sec" id="productos" style="background:#FBF7F0"><div class="wrap">
- <div class="head"><span class="eyebrow">Nuestros productos</span><h2 class="serif">Todo lo que necesitan<br>para su día a día&nbsp;</h2><p>Escribinos por WhatsApp y te pasamos precios, talles y disponibilidad.</p></div>
- <div class="grid">
-  <article class="card"><div class="media"><img src="calleMarea.webp" alt="Perro con arnés en H turquesa"><span class="tag">Más vendido</span></div><div class="body"><h3>Arneses en “H”</h3><p>Paseos más seguros y cómodos. Se ajustan al cuerpo de tu perro para que camine a gusto y vos vayas tranquilo.</p><a class="btn btn-ghost" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20los%20arneses%20en%20H" target="_blank" rel="noopener">Consultar precio</a></div></article>
-  <article class="card"><div class="media"><img src="collares.webp" alt="Collares Para Perros en tres talles"></div><div class="body"><h3>Collares</h3><p>Resistentes, cómodos y con diseños exclusivos que lo hacen destacar. El complemento ideal para su chapita.</p><a class="btn btn-ghost" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20los%20collares" target="_blank" rel="noopener">Consultar precio</a></div></article>
-  <article class="card"><div class="media"><img src="puchito.webp" alt="Chapitas hueso personalizadas"></div><div class="body"><h3>Chapitas identificatorias</h3><p>Para que, si algún día se pierde, vuelva a casa. Con su nombre y tu teléfono grabados, cualquiera puede avisarte al instante.</p><a class="btn btn-ghost" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20las%20chapitas%20identificatorias" target="_blank" rel="noopener">Consultar precio</a></div></article>
-  <article class="card"><div class="media"><img src="correas.webp" alt="Correas con mosquetón"></div><div class="body"><h3>Correas de 3 metros</h3><p>Seguro sin dejar de ser libre. Largo de sobra para que explore, mosquetón firme para que vos tengas el control.</p><a class="btn btn-ghost" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20las%20correas" target="_blank" rel="noopener">Consultar precio</a></div></article>
-  <article class="card"><div class="media"><img src="pelota.webp" alt="Golden olfateando una pelota de olfato roja"></div><div class="body"><h3>Pelotas de olfato</h3><p>Entretenelo y cansalo sin salir de casa. Escondés premios y su nariz se pone a trabajar: más estimulación, menos aburrimiento. Se lava en lavarropas.</p><a class="btn btn-ghost" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20las%20pelotas%20de%20olfato" target="_blank" rel="noopener">Consultar precio</a></div></article>
-  <article class="card"><div class="media"><img src="sogaRoja.webp" alt="Soga Flex roja trenzada de algodón"></div><div class="body"><h3>Sogas Flex</h3><p>Para jugar a full con vos. 100% algodón natural, ideal para el tira y afloje y para que descargue toda su energía.</p><a class="btn btn-ghost" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20consultar%20por%20las%20sogas%20flex" target="_blank" rel="noopener">Consultar precio</a></div></article>
- </div>
-</div></div>
+    <div>
+      <section class="step"><h2 class="step-title"><span class="step-num">1</span> Forma</h2><div class="opts" id="shapes"></div></section>
 
-<div class="sec" id="talles"><div class="talles">
- <div class="head"><span class="eyebrow">Guía de talles</span><h2 class="serif">Elegí el talle indicado<br>para tu perro</h2><p>Tomá el contorno de cuello y de pecho de tu perro y compará con la tabla. Un talle bien elegido es más comodidad para él y más seguridad para vos.</p></div>
- <div class="size-wrap">
-  <table class="size">
-   <thead><tr><th class="blank"></th><th class="blank"></th><th class="s">TALLE S</th><th class="m">TALLE M</th><th class="l">TALLE L</th><th class="xl">TALLE XL</th></tr></thead>
-   <tbody>
-    <tr><td>Collar</td><td>Contorno de cuello</td><td><strong>27 a 40</strong> cm</td><td><strong>32 a 46</strong> cm</td><td><strong>38 a 56</strong> cm</td><td><strong>42 a 65</strong> cm</td></tr>
-    <tr><td>Pretal H</td><td>Contorno de cuello</td><td><strong>25 a 38</strong> cm</td><td><strong>33 a 47</strong> cm</td><td><strong>39 a 58</strong> cm</td><td><strong>49 a 78</strong> cm</td></tr>
-    <tr><td>Pretal H</td><td>Largo de pecho</td><td><strong>12 a 17</strong> cm</td><td><strong>18 a 23</strong> cm</td><td><strong>23 a 32</strong> cm</td><td><strong>32 a 44</strong> cm</td></tr>
-    <tr><td>Pretal H</td><td>Contorno de pecho</td><td><strong>38 a 53</strong> cm</td><td><strong>45 a 59</strong> cm</td><td><strong>58 a 77</strong> cm</td><td><strong>65 a 93</strong> cm</td></tr>
-    <tr><td>Correa</td><td>Ancho de cinta</td><td><strong>15mm</strong></td><td><strong>25mm</strong></td><td><strong>40mm</strong></td><td><strong>40mm</strong></td></tr>
-    <tr><td>Correa</td><td>Largo</td><td colspan="4" style="text-align:center;color:#6B6155">3 metros · mosquetón reforzado</td></tr>
-   </tbody>
-  </table>
- </div>
- <div class="note">
-  <div class="box">¿Tu perro tiene una medida especial? Hacemos los accesorios a medida: escribinos por WhatsApp.</div>
-  <div class="how">Rodeá el cuello o el pecho de tu perro con una cinta métrica, sin ajustar de más, y compará con la tabla.</div>
-  <a class="btn btn-dark" href="https://wa.me/5493465651267?text=Hola!%20Necesito%20ayuda%20para%20elegir%20el%20talle" target="_blank" rel="noopener">Ayudame a elegir el talle</a>
- </div>
-</div></div>
+      <section class="step"><h2 class="step-title"><span class="step-num">2</span> Tamaño</h2><div class="opts wide" id="sizes"></div></section>
 
-<div class="sec tags-sec" id="chapitas"><div class="wrap">
- <div>
-  <span class="eyebrow" style="color:#e4a936">Chapitas personalizadas</span>
-  <h2 class="serif">Si algún día se pierde, que vuelva a casa</h2>
-  <p class="t">Una chapita con su nombre y tu teléfono es la forma más simple de cuidarlo: quien lo encuentre te llama en el momento. Elegí color, forma, tamaño y tipografía, y la hacemos a tu gusto con diseños exclusivos.</p>
-  <a class="btn btn-main" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20encargar%20una%20chapita%20personalizada" target="_blank" rel="noopener">Pedir mi chapita</a>
- </div>
- <div class="trio"><img src="sasha.webp" alt="Chapita hueso con el nombre Sasha"><img src="puchito.webp" alt="Chapitas hueso turquesa y gris con nombres"><img src="minerva.webp" alt="Chapita hueso glitter con el nombre Minerva"></div>
-</div></div>
+      <section class="step"><h2 class="step-title"><span class="step-num">3</span> Color de la chapita <small style="font-weight:500;color:var(--ink-soft);font-size:.78rem">· fotos de chapitas reales</small></h2>
+        <div class="swatches" id="colors"></div>
+        <p class="picked">Color elegido: <b id="colorName"></b></p>
+      </section>
 
-<div class="sec" id="galeria"><div class="wrap">
- <div class="head"><span class="eyebrow">Galería</span><h2 class="serif">Perros felices, dueños tranquilos</h2><p>Nuestros accesorios en acción, y un vistazo al detrás de escena.</p></div>
- <div class="gal">
-  <figure><img src="osita.webp" alt="Osita, golden retriever con collar y chapita hueso" style="object-position:50% 45%"></figure>
-  <figure><img src="sogaCollie.webp" alt="Border collie jugando con una soga flex roja"></figure>
-  <figure><img src="sogaPerroNegro.webp" alt="Perro negro corriendo con una soga flex de colores"></figure>
-  <figure><img src="calleMarea.webp" alt="Perro paseando con arnés y correa turquesa"></figure>
-  <figure><img src="flatlay.webp" alt="Arneses y correas con diseños exclusivos"></figure>
-  <figure><img src="chapitasCrudas.webp" alt="Chapitas de resina antes del grabado"></figure>
- </div>
-</div></div>
+      <section class="step"><h2 class="step-title"><span class="step-num">4</span> Nombre y teléfono</h2>
+        <div class="two-fields">
+          <div class="field"><label for="czName">Nombre (frente)</label><input type="text" id="czName" placeholder="Nombre de tu perro" value="Toby" maxlength="14" autocomplete="off"></div>
+          <div class="field"><label for="czPhone">Teléfono (dorso, siempre en Arial Black)</label><input type="text" id="czPhone" placeholder="11 5555 5555" value="11 5555 5555" maxlength="18" autocomplete="off"></div>
+        </div>
+        <p class="picked">Hasta 14 caracteres en el nombre y 18 en el teléfono.</p>
+      </section>
 
-<div class="sec cta"><div class="wrap">
- <h2 class="serif">Cuidalo hoy, disfrutalo en cada paseo</h2>
- <p>Pedinos el catálogo con precios, talles y disponibilidad. Te respondemos personalmente y te ayudamos a elegir lo ideal para tu perro.</p>
- <a class="btn btn-main" href="https://wa.me/5493465651267?text=Hola!%20Quiero%20el%20cat%C3%A1logo%20con%20precios%20y%20talles" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
-</div></div>
+      <section class="step"><h2 class="step-title"><span class="step-num">5</span> Tipografía</h2>
+        <div class="opts" id="fonts"></div>
+        <div class="warn" id="fontWarn" role="status" hidden></div>
+      </section>
 
-<div class="foot" id="contacto"><div class="wrap">
- <div><img class="logo" src="logo.svg" alt="Para Perros"><p>Accesorios para mascotas con amor, calidad y estilo.</p></div>
- <div><h4>Contacto</h4><ul>
-  <li><a href="https://wa.me/5493465651267" target="_blank" rel="noopener">WhatsApp +54 9 3465 651267</a></li>
-  <li><a href="mailto:paraperros.arg@gmail.com">paraperros.arg@gmail.com</a></li>
-  <li><a href="https://instagram.com/paraperros.arg" target="_blank" rel="noopener">Instagram @paraperros.arg</a></li></ul></div>
- <div><h4>Secciones</h4><ul><li><a href="#productos">Productos</a></li><li><a href="#talles">Guía de talles</a></li><li><a href="#chapitas">Chapitas</a></li><li><a href="#galeria">Galería</a></li></ul></div>
- <div class="copy">© 2026 Para Perros. Hecho con amor en Argentina.</div>
-</div></div>
-<a class="float" href="https://wa.me/5493465651267?text=Hola!" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"></path></svg><span>¡Hablemos!</span></a>
-</div>
+      <section class="step"><h2 class="step-title"><span class="step-num">6</span> Color de las letras</h2>
+        <div class="swatches" id="tcolors"></div>
+        <p class="picked">Color de letras: <b id="tcName"></b></p>
+        <div class="warn" id="lowContrast" role="status" hidden>Ojo: el color de las letras es parecido al de la chapita y se va a leer con dificultad. Probá con otro color de letras.</div>
+      </section>
+
+      <section class="cz-summary" aria-label="Resumen de tu chapita">
+        <h2>Tu chapita</h2>
+        <dl id="sum"></dl>
+        <div class="actions">
+          <button type="button" class="btn btn-main" id="copyBtn">Copiar resumen</button>
+          <a class="btn btn-wa" id="waBtn" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+          <a class="btn btn-ghost" href="https://paraperros.com.ar">Ir a la tienda</a>
+        </div>
+        <div class="how"><b>Cómo seguir:</b> copiá el resumen, elegí la chapita en la tienda y pegalo en el campo de personalización antes de comprar. Producción en menos de 24hs. Esto no es un pago: coordinamos stock y medio de pago al confirmar.</div>
+      </section>
+    </div>
+  </div>
+</main>
+<div class="stripe-bar"></div>
+
+<script>
+const WHATSAPP = '5493465651267';
+const CZ_TAGS = {"circle":[["Frambuesa","img/92ac1280fa2e2e6056e6677dc82122f2.webp",323,325,"#c2446b",0.5,0.5,[0.0402,0.6594,0.0704,0.6594,0.1006,0.6533,0.1308,0.6471,0.161,0.6409,0.1912,0.6285,0.2214,0.6161,0.2515,0.6037,0.2817,0.5913,0.3119,0.5728,0.3421,0.5604,0.3723,0.5418,0.4025,0.517,0.4327,0.4985,0.4628,0.4737,0.493,0.4427,0.5232,0.4056,0.5534,0.356,0.5836,0.3003,0.6138,0.2384,0.644,0.1703],[0.0402,0.7461,0.0704,0.7461,0.1006,0.7399,0.1308,0.7399,0.161,0.7337,0.1912,0.7214,0.2214,0.7152,0.2515,0.7028,0.2817,0.6904,0.3119,0.6718,0.3421,0.6594,0.3723,0.6409,0.4025,0.6223,0.4327,0.6099,0.4628,0.5851,0.493,0.5604,0.5232,0.5294,0.5534,0.4985,0.5836,0.4613,0.6138,0.4241,0.644,0.3808,0.6741,0.3251,0.7043,0.257,0.7345,0.1641]],["Bordó","img/5f741e3d37b4fef439de7e444ebdef02.webp",321,323,"#6e393d",0.5,0.5,[0.0402,0.6698,0.0704,0.6698,0.1006,0.6636,0.1308,0.6573,0.161,0.6511,0.1912,0.6386,0.2214,0.6262,0.2516,0.6137,0.2817,0.6012,0.3119,0.5826,0.3421,0.5701,0.3723,0.5514,0.4025,0.5265,0.4327,0.5016,0.4629,0.4766,0.4931,0.4393,0.5232,0.4143,0.5534,0.3707,0.5836,0.3209,0.6138,0.2523,0.644,0.1713],[0.0402,0.7508,0.0704,0.7508,0.1006,0.7445,0.1308,0.7445,0.161,0.7383,0.1912,0.7321,0.2214,0.7196,0.2516,0.7072,0.2817,0.6947,0.3119,0.6822,0.3421,0.6698,0.3723,0.6511,0.4025,0.6324,0.4327,0.6137,0.4629,0.5888,0.4931,0.5639,0.5232,0.5452,0.5534,0.5078,0.5836,0.4766,0.6138,0.433,0.644,0.3832,0.6742,0.3271,0.7044,0.2523,0.7345,0.1776]],["Turquesa","img/b53235d03a1ee331dd9a2bf06f1dff31.webp",321,323,"#158fc6",0.5,0.5,[0.0402,0.6698,0.0704,0.6698,0.1006,0.6636,0.1308,0.6573,0.161,0.6511,0.1912,0.6386,0.2214,0.6262,0.2516,0.6137,0.2817,0.6012,0.3119,0.5826,0.3421,0.5701,0.3723,0.5514,0.4025,0.5265,0.4327,0.5016,0.4629,0.4766,0.4931,0.4393,0.5232,0.4143,0.5534,0.3707,0.5836,0.3209,0.6138,0.2523,0.644,0.1713],[0.0402,0.7508,0.0704,0.7508,0.1006,0.7445,0.1308,0.7445,0.161,0.7383,0.1912,0.7321,0.2214,0.7196,0.2516,0.7072,0.2817,0.6947,0.3119,0.6822,0.3421,0.6698,0.3723,0.6511,0.4025,0.6324,0.4327,0.6137,0.4629,0.5888,0.4931,0.5639,0.5232,0.5452,0.5534,0.5078,0.5836,0.4766,0.6138,0.433,0.644,0.3832,0.6742,0.3271,0.7044,0.2523,0.7345,0.1776]],["Azul acero","img/66a26551206276ec5920663d91a8e77f.webp",317,319,"#3b6499",0.5,0.5,[0.0403,0.6656,0.0704,0.6656,0.1006,0.6593,0.1308,0.6593,0.161,0.6467,0.1912,0.6341,0.2214,0.6215,0.2516,0.6151,0.2818,0.6025,0.312,0.5836,0.3421,0.5647,0.3723,0.5457,0.4025,0.5268,0.4327,0.5016,0.4629,0.4763,0.4931,0.4448,0.5233,0.4132,0.5535,0.3691,0.5837,0.3123,0.6138,0.2492,0.644,0.1609],[0.0403,0.7539,0.0704,0.7539,0.1006,0.7476,0.1308,0.7413,0.161,0.735,0.1912,0.7287,0.2214,0.7161,0.2516,0.7098,0.2818,0.6972,0.312,0.6782,0.3421,0.6656,0.3723,0.6467,0.4025,0.6341,0.4327,0.6151,0.4629,0.5899,0.4931,0.5647,0.5233,0.5394,0.5535,0.5079,0.5837,0.47,0.6138,0.4322,0.644,0.3817,0.6742,0.3375,0.7044,0.2618,0.7346,0.1609]],["Rosa viejo","img/9ac3292f9c333589dbd0ef01d518d7b7.webp",327,329,"#a05374",0.5,0.5,[0.0402,0.6636,0.0704,0.6636,0.1006,0.6575,0.1308,0.6514,0.161,0.6453,0.1912,0.633,0.2213,0.6208,0.2515,0.6086,0.2817,0.5963,0.3119,0.5841,0.3421,0.5657,0.3723,0.5474,0.4024,0.5229,0.4326,0.4985,0.4628,0.474,0.493,0.4434,0.5232,0.4067,0.5534,0.3639,0.5835,0.3089,0.6137,0.2477,0.6439,0.1682],[0.0402,0.7492,0.0704,0.7492,0.1006,0.7431,0.1308,0.737,0.161,0.7309,0.1912,0.7248,0.2213,0.7125,0.2515,0.7003,0.2817,0.6881,0.3119,0.682,0.3421,0.6636,0.3723,0.6453,0.4024,0.6269,0.4326,0.6086,0.4628,0.5841,0.493,0.5596,0.5232,0.5352,0.5534,0.5046,0.5835,0.4679,0.6137,0.4251,0.6439,0.3823,0.6741,0.3272,0.7043,0.2538,0.7345,0.156]],["Chocolate","img/418d8df90f694d7a8e2dcdf08338137e.webp",319,321,"#543434",0.5,0.5,[0.0403,0.6614,0.0704,0.6614,0.1006,0.6552,0.1308,0.6489,0.161,0.6426,0.1912,0.6301,0.2214,0.6176,0.2516,0.605,0.2818,0.5925,0.3119,0.5799,0.3421,0.5611,0.3723,0.5423,0.4025,0.5172,0.4327,0.4984,0.4629,0.4734,0.4931,0.442,0.5233,0.4044,0.5534,0.3542,0.5836,0.3041,0.6138,0.2476,0.644,0.1661],[0.0403,0.7492,0.0704,0.7492,0.1006,0.7429,0.1308,0.7367,0.161,0.7304,0.1912,0.7179,0.2214,0.7116,0.2516,0.6991,0.2818,0.6865,0.3119,0.674,0.3421,0.6614,0.3723,0.6426,0.4025,0.6238,0.4327,0.605,0.4629,0.5862,0.4931,0.5611,0.5233,0.5298,0.5534,0.4984,0.5836,0.4608,0.6138,0.4295,0.644,0.3793,0.6742,0.3229,0.7044,0.2476,0.7346,0.1473]],["Celeste","img/6bf031527cf5dd236a3723a9b86eae17.webp",321,323,"#3ea2d9",0.5,0.5,[0.0402,0.6698,0.0704,0.6698,0.1006,0.6636,0.1308,0.6573,0.161,0.6511,0.1912,0.6386,0.2214,0.6262,0.2516,0.6137,0.2817,0.6012,0.3119,0.5826,0.3421,0.5701,0.3723,0.5514,0.4025,0.5265,0.4327,0.5016,0.4629,0.4766,0.4931,0.4393,0.5232,0.4143,0.5534,0.3707,0.5836,0.3209,0.6138,0.2523,0.644,0.1713],[0.0402,0.7508,0.0704,0.7508,0.1006,0.7445,0.1308,0.7445,0.161,0.7383,0.1912,0.7321,0.2214,0.7196,0.2516,0.7072,0.2817,0.6947,0.3119,0.6822,0.3421,0.6698,0.3723,0.6511,0.4025,0.6324,0.4327,0.6137,0.4629,0.5888,0.4931,0.5639,0.5232,0.5452,0.5534,0.5078,0.5836,0.4766,0.6138,0.433,0.644,0.3832,0.6742,0.3271,0.7044,0.2523,0.7345,0.1776]],["Azul rey","img/270d57245566e3d1c0b137968b455aef.webp",323,325,"#265d9e",0.5,0.5,[0.0402,0.6594,0.0704,0.6594,0.1006,0.6533,0.1308,0.6471,0.161,0.6409,0.1912,0.6285,0.2214,0.6161,0.2515,0.6037,0.2817,0.5913,0.3119,0.5728,0.3421,0.5604,0.3723,0.5418,0.4025,0.517,0.4327,0.4985,0.4628,0.4737,0.493,0.4427,0.5232,0.4056,0.5534,0.356,0.5836,0.3003,0.6138,0.2384,0.644,0.1703],[0.0402,0.7461,0.0704,0.7461,0.1006,0.7399,0.1308,0.7399,0.161,0.7337,0.1912,0.7214,0.2214,0.7152,0.2515,0.7028,0.2817,0.6904,0.3119,0.6718,0.3421,0.6594,0.3723,0.6409,0.4025,0.6223,0.4327,0.6099,0.4628,0.5851,0.493,0.5604,0.5232,0.5294,0.5534,0.4985,0.5836,0.4613,0.6138,0.4241,0.644,0.3808,0.6741,0.3251,0.7043,0.257,0.7345,0.1641]],["Fucsia","img/a0cca41e7a34d928909c3a14ef82b640.webp",321,322,"#952e56",0.5,0.4984,[0.0401,0.6698,0.0702,0.6698,0.1003,0.6636,0.1304,0.6573,0.1605,0.6511,0.1906,0.6386,0.2207,0.6262,0.2508,0.6137,0.2809,0.6012,0.311,0.5888,0.3411,0.5701,0.3712,0.5514,0.4012,0.5265,0.4313,0.5016,0.4614,0.4766,0.4915,0.4517,0.5216,0.4143,0.5517,0.3707,0.5818,0.3209,0.6119,0.2523,0.642,0.1713],[0.0401,0.7508,0.0702,0.7508,0.1003,0.7445,0.1304,0.7445,0.1605,0.7383,0.1906,0.7321,0.2207,0.7196,0.2508,0.7072,0.2809,0.6947,0.311,0.6822,0.3411,0.6698,0.3712,0.6511,0.4012,0.6324,0.4313,0.6137,0.4614,0.5888,0.4915,0.5701,0.5216,0.5452,0.5517,0.5078,0.5818,0.4766,0.6119,0.433,0.642,0.3832,0.6721,0.3396,0.7022,0.271,0.7323,0.1776]],["Violeta","img/825deb291d1523dd5a841be17e5aff7d.webp",311,313,"#413565",0.5,0.5,[0.0403,0.6592,0.0705,0.6592,0.1006,0.6527,0.1308,0.6463,0.161,0.6399,0.1912,0.6334,0.2214,0.6206,0.2516,0.6077,0.2818,0.5949,0.312,0.5756,0.3422,0.5563,0.3724,0.5434,0.4026,0.5177,0.4328,0.492,0.463,0.4727,0.4932,0.4341,0.5233,0.4019,0.5535,0.3505,0.5837,0.3119,0.6139,0.2412,0.6441,0.1576],[0.0403,0.7428,0.0705,0.7428,0.1006,0.7428,0.1308,0.7363,0.161,0.7299,0.1912,0.7235,0.2214,0.7106,0.2516,0.6977,0.2818,0.6849,0.312,0.672,0.3422,0.6592,0.3724,0.6463,0.4026,0.627,0.4328,0.6013,0.463,0.582,0.4932,0.5563,0.5233,0.5305,0.5535,0.492,0.5837,0.4662,0.6139,0.4212,0.6441,0.3698,0.6743,0.3248,0.7045,0.2476,0.7347,0.1511]],["Aqua","img/308105f16d2c9f36f3a52eee7d73e063.webp",311,313,"#4895aa",0.5,0.5,[0.0403,0.6592,0.0705,0.6592,0.1006,0.6527,0.1308,0.6463,0.161,0.6399,0.1912,0.6334,0.2214,0.6206,0.2516,0.6077,0.2818,0.5949,0.312,0.5756,0.3422,0.5563,0.3724,0.5434,0.4026,0.5177,0.4328,0.492,0.463,0.4727,0.4932,0.4341,0.5233,0.4019,0.5535,0.3505,0.5837,0.3119,0.6139,0.2412,0.6441,0.1576],[0.0403,0.7428,0.0705,0.7428,0.1006,0.7428,0.1308,0.7363,0.161,0.7299,0.1912,0.7235,0.2214,0.7106,0.2516,0.6977,0.2818,0.6849,0.312,0.672,0.3422,0.6592,0.3724,0.6463,0.4026,0.627,0.4328,0.6013,0.463,0.582,0.4932,0.5563,0.5233,0.5305,0.5535,0.492,0.5837,0.4662,0.6139,0.4212,0.6441,0.3698,0.6743,0.3248,0.7045,0.2476,0.7347,0.1511]],["Esmeralda","img/ed79225b7e123469e1b54f76d72020f3.webp",317,319,"#4eb29b",0.5,0.5,[0.0403,0.6656,0.0704,0.6656,0.1006,0.6593,0.1308,0.6593,0.161,0.6467,0.1912,0.6341,0.2214,0.6215,0.2516,0.6151,0.2818,0.6025,0.312,0.5836,0.3421,0.5647,0.3723,0.5457,0.4025,0.5268,0.4327,0.5016,0.4629,0.4763,0.4931,0.4448,0.5233,0.4132,0.5535,0.3691,0.5837,0.3123,0.6138,0.2492,0.644,0.1609],[0.0403,0.7539,0.0704,0.7539,0.1006,0.7476,0.1308,0.7413,0.161,0.735,0.1912,0.7287,0.2214,0.7161,0.2516,0.7098,0.2818,0.6972,0.312,0.6782,0.3421,0.6656,0.3723,0.6467,0.4025,0.6341,0.4327,0.6151,0.4629,0.5899,0.4931,0.5647,0.5233,0.5394,0.5535,0.5079,0.5837,0.47,0.6138,0.4322,0.644,0.3817,0.6742,0.3375,0.7044,0.2618,0.7346,0.1609]],["Ciruela","img/ae87d204d8784b90c7c1775e96db6a37.webp",315,317,"#65364c",0.5,0.5,[0.0403,0.6635,0.0704,0.6571,0.1006,0.6571,0.1308,0.6508,0.161,0.6381,0.1912,0.6254,0.2214,0.619,0.2516,0.6063,0.2818,0.5873,0.312,0.5746,0.3422,0.5619,0.3723,0.5429,0.4025,0.5175,0.4327,0.4921,0.4629,0.4667,0.4931,0.4349,0.5233,0.4032,0.5535,0.3524,0.5837,0.3079,0.6139,0.2444,0.6441,0.1556],[0.0403,0.746,0.0704,0.746,0.1006,0.7397,0.1308,0.7397,0.161,0.727,0.1912,0.7206,0.2214,0.7143,0.2516,0.7016,0.2818,0.6889,0.312,0.6698,0.3422,0.6571,0.3723,0.6444,0.4025,0.6254,0.4327,0.6063,0.4629,0.5873,0.4931,0.5619,0.5233,0.5302,0.5535,0.4984,0.5837,0.4667,0.6139,0.4286,0.6441,0.3778,0.6743,0.3143,0.7044,0.2571,0.7346,0.1619]],["Crema","img/ef09a8a5c11fbf5d51fdaab58d174949.webp",315,317,"#d5d7b3",0.5,0.5,[0.0403,0.6635,0.0704,0.6571,0.1006,0.6571,0.1308,0.6508,0.161,0.6381,0.1912,0.6254,0.2214,0.619,0.2516,0.6063,0.2818,0.5873,0.312,0.5746,0.3422,0.5619,0.3723,0.5429,0.4025,0.5175,0.4327,0.4921,0.4629,0.4667,0.4931,0.4349,0.5233,0.4032,0.5535,0.3524,0.5837,0.3079,0.6139,0.2444,0.6441,0.1556],[0.0403,0.746,0.0704,0.746,0.1006,0.7397,0.1308,0.7397,0.161,0.727,0.1912,0.7206,0.2214,0.7143,0.2516,0.7016,0.2818,0.6889,0.312,0.6698,0.3422,0.6571,0.3723,0.6444,0.4025,0.6254,0.4327,0.6063,0.4629,0.5873,0.4931,0.5619,0.5233,0.5302,0.5535,0.4984,0.5837,0.4667,0.6139,0.4286,0.6441,0.3778,0.6743,0.3143,0.7044,0.2571,0.7346,0.1619]],["Petróleo","img/a712cb5f557db8158e30da7b5f3e5bad.webp",301,303,"#3b8297",0.5,0.5,[0.0403,0.6678,0.0705,0.6678,0.1007,0.6611,0.1309,0.6545,0.1611,0.6412,0.1913,0.6346,0.2215,0.6213,0.2517,0.608,0.2819,0.5947,0.3121,0.5814,0.3423,0.5615,0.3725,0.5415,0.4027,0.5216,0.4329,0.495,0.4631,0.4751,0.4933,0.4352,0.5235,0.4086,0.5537,0.3555,0.5839,0.309,0.6141,0.2425,0.6443,0.1694],[0.0403,0.7475,0.0705,0.7475,0.1007,0.7475,0.1309,0.7409,0.1611,0.7342,0.1913,0.7276,0.2215,0.7143,0.2517,0.701,0.2819,0.6877,0.3121,0.6811,0.3423,0.6611,0.3725,0.6412,0.4027,0.6279,0.4329,0.608,0.4631,0.588,0.4933,0.5615,0.5235,0.5349,0.5537,0.5017,0.5839,0.4684,0.6141,0.4219,0.6443,0.3821,0.6745,0.3223,0.7047,0.2425,0.7349,0.1561]],["Verde bosque","img/29def884d31627e45c9b9e6c25eb6a37.webp",313,315,"#3c5349",0.5,0.5,[0.0403,0.6677,0.0704,0.6677,0.1006,0.6613,0.1308,0.655,0.161,0.6486,0.1912,0.6358,0.2214,0.623,0.2516,0.6102,0.2818,0.5974,0.312,0.5847,0.3422,0.5655,0.3724,0.5463,0.4026,0.5272,0.4327,0.5016,0.4629,0.476,0.4931,0.4441,0.5233,0.4121,0.5535,0.3674,0.5837,0.3099,0.6139,0.2396,0.6441,0.1757],[0.0403,0.7508,0.0704,0.7508,0.1006,0.7444,0.1308,0.7444,0.161,0.738,0.1912,0.7316,0.2214,0.7188,0.2516,0.7061,0.2818,0.6933,0.312,0.6805,0.3422,0.6677,0.3724,0.6486,0.4026,0.6358,0.4327,0.6102,0.4629,0.5911,0.4931,0.5655,0.5233,0.5399,0.5535,0.508,0.5837,0.4696,0.6139,0.4249,0.6441,0.3866,0.6743,0.3291,0.7045,0.2588,0.7347,0.1757]],["Lima","img/2ff1ae79f616dff6ff5f396047800bfc.webp",317,319,"#c1db54",0.5,0.5,[0.0403,0.6656,0.0704,0.6656,0.1006,0.6593,0.1308,0.6593,0.161,0.6467,0.1912,0.6341,0.2214,0.6215,0.2516,0.6151,0.2818,0.6025,0.312,0.5836,0.3421,0.5647,0.3723,0.5457,0.4025,0.5268,0.4327,0.5016,0.4629,0.4763,0.4931,0.4448,0.5233,0.4132,0.5535,0.3691,0.5837,0.3123,0.6138,0.2492,0.644,0.1609],[0.0403,0.7539,0.0704,0.7539,0.1006,0.7476,0.1308,0.7413,0.161,0.735,0.1912,0.7287,0.2214,0.7161,0.2516,0.7098,0.2818,0.6972,0.312,0.6782,0.3421,0.6656,0.3723,0.6467,0.4025,0.6341,0.4327,0.6151,0.4629,0.5899,0.4931,0.5647,0.5233,0.5394,0.5535,0.5079,0.5837,0.47,0.6138,0.4322,0.644,0.3817,0.6742,0.3375,0.7044,0.2618,0.7346,0.1609]],["Mármol pastel","img/13572f9ef4167e2fb20e1b34997eaf62.webp",309,311,"#e4dba2",0.5,0.5,[0.0403,0.6634,0.0705,0.6634,0.1006,0.6634,0.1308,0.6505,0.161,0.644,0.1912,0.6375,0.2214,0.6246,0.2516,0.6117,0.2818,0.5987,0.312,0.5793,0.3422,0.5663,0.3724,0.5469,0.4026,0.5275,0.4328,0.5016,0.463,0.4757,0.4932,0.4434,0.5234,0.411,0.5536,0.3592,0.5838,0.3074,0.6139,0.2492,0.6441,0.165],[0.0403,0.754,0.0705,0.754,0.1006,0.7476,0.1308,0.7411,0.161,0.7346,0.1912,0.7282,0.2214,0.7152,0.2516,0.7023,0.2818,0.6893,0.312,0.6764,0.3422,0.6634,0.3724,0.644,0.4026,0.6246,0.4328,0.6117,0.463,0.5858,0.4932,0.5599,0.5234,0.534,0.5536,0.5016,0.5838,0.4628,0.6139,0.4304,0.6441,0.3786,0.6743,0.3204,0.7045,0.2557,0.7347,0.1586]],["Glitter cristal","img/80891ee75a46aefea3a93142ed4c8be0.webp",299,299,"#bad9e0",0.5,0.5,[],[]]],"bone":[["Crema","img/e233b3ee4592ecdd8f26548bebaa9e59.webp",450,282,"#e9e5c2",0.5,0.5904,[0.0251,0.5978,0.0439,0.5978,0.0627,0.5933,0.0815,0.2733],[0.0251,0.6689,0.0439,0.6644,0.0627,0.6644,0.0815,0.6644,0.1003,0.6644,0.1191,0.6644,0.1379,0.6644]],["Negro","img/352a90511503b97f5fdf2bd8bf9a66b8.webp",450,285,"#393d41",0.5,0.5895,[0.0253,0.5844,0.0443,0.58,0.0633,0.58,0.0823,0.58],[0.0253,0.6556,0.0443,0.6511,0.0633,0.6511,0.0823,0.6511,0.1013,0.6511,0.1203,0.6511,0.1393,0.6511,0.1583,0.6511]],["Grafito jaspeado","img/8db7c251ea00de3cf733a6b6c3a0ca74.webp",450,283,"#45474c",0.5,0.5866,[0.0252,0.5844,0.044,0.58,0.0629,0.58,0.0818,0.58],[0.0252,0.6511,0.044,0.6511,0.0629,0.6511,0.0818,0.6511,0.1006,0.6511,0.1195,0.6511,0.1384,0.6511,0.1572,0.6511]],["Glitter rosé","img/3d6735b9f75d05cd845edc7dfbfede90.webp",450,287,"#c89d87",0.5,0.5906,[0.0255,0.5844,0.0446,0.5844,0.0638,0.5844,0.0829,0.0244],[0.0255,0.6556,0.0446,0.6556,0.0638,0.6556,0.0829,0.6556,0.102,0.6556,0.1212,0.6556,0.1403,0.0778]],["Celeste","img/0d6b6429b188242c3d585f010e891ed1.webp",450,284,"#6bb0c5",0.4989,0.5933,[0.0252,0.5844,0.0442,0.58,0.0631,0.58,0.082,0.58],[0.0252,0.6511,0.0442,0.6511,0.0631,0.6511,0.082,0.6511,0.101,0.6511,0.1199,0.6511,0.1388,0.6511]],["Verde agua","img/baf95d806ae323720223c449faf21b33.webp",450,287,"#71a2ab",0.5,0.5889,[0.0255,0.5844,0.0446,0.58,0.0638,0.58,0.0829,0.58,0.102,0.58],[0.0255,0.6511,0.0446,0.6511,0.0638,0.6511,0.0829,0.6511,0.102,0.6511,0.1212,0.6511,0.1403,0.6511,0.1594,0.6511]],["Azul","img/b87dd94811102b5760ffbff74b9609ac.webp",450,287,"#3b80b7",0.5,0.5923,[0.0255,0.5844,0.0446,0.58,0.0638,0.58,0.0829,0.58],[0.0255,0.6511,0.0446,0.6511,0.0638,0.6511,0.0829,0.6511,0.102,0.6511,0.1212,0.6511,0.1403,0.6511,0.1594,0.6511]],["Azul rey","img/242c697fbd2357180c4956c34e8d7f63.webp",450,287,"#2f518b",0.5,0.5871,[0.0255,0.5978,0.0446,0.5933,0.0638,0.5933,0.0829,0.5933,0.102,0.5933],[0.0255,0.6689,0.0446,0.6644,0.0638,0.6644,0.0829,0.6644,0.102,0.6644,0.1212,0.6644,0.1403,0.6644,0.1594,0.6644]],["Rosa viejo","img/31a39abc3821321336c5617c05543802.webp",450,283,"#c18189",0.5,0.5936,[0.0252,0.58,0.044,0.5756,0.0629,0.5711,0.0818,0.5711],[0.0252,0.6467,0.044,0.6422,0.0629,0.6422,0.0818,0.6422,0.1006,0.6422,0.1195,0.6422,0.1384,0.6422,0.1572,0.6422]],["Frambuesa","img/a84b8bd41e2b2832824720cd5800146a.webp",450,285,"#c65a75",0.5,0.5895,[0.0253,0.5889,0.0443,0.5889,0.0633,0.5889,0.0823,0.5889,0.1013,0.2911],[0.0253,0.66,0.0443,0.66,0.0633,0.66,0.0823,0.66,0.1013,0.66,0.1203,0.66,0.1393,0.66,0.1583,0.66]],["Violeta","img/3a39116d8d0de069afcd7950de2dbe39.webp",450,285,"#914e76",0.5,0.593,[0.0253,0.5889,0.0443,0.5844,0.0633,0.5844,0.0823,0.5844],[0.0253,0.66,0.0443,0.6556,0.0633,0.6556,0.0823,0.6556,0.1013,0.6556,0.1203,0.6556,0.1393,0.6556,0.1583,0.6556]],["Bordó","img/70bb45aa8480ce257059572f558b7608.webp",450,285,"#4a211f",0.5,0.5895,[0.0253,0.5889,0.0443,0.5844,0.0633,0.58,0.0823,0.58],[0.0253,0.6556,0.0443,0.6511,0.0633,0.6511,0.0823,0.6511,0.1013,0.6511,0.1203,0.6511,0.1393,0.6511,0.1583,0.6511]]]};
+const CZ_TEXT_COLORS = [
+  { id: 'blanco', name: 'Blanco', rep: '#FFFFFF', css: 'color:#FFFFFF', style: 'background:#FFFFFF' },
+  { id: 'negro', name: 'Negro', rep: '#1B1712', css: 'color:#1B1712', style: 'background:#1B1712' },
+  { id: 'dorado', name: 'Dorado', rep: '#C99A2E', css: 'color:#C99A2E;background:linear-gradient(135deg,#F7E58B,#D4A62A 45%,#F3D774 75%,#B8861B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent', style: 'background:linear-gradient(135deg,#F7E58B,#D4A62A 45%,#F3D774 75%,#B8861B)' }
+];
+const CZ_FONTS = [
+  { id: 'harland', off: -0.02, label: 'Harland Roselyn', family: "'PP harland', cursive", weight: 400, cap: 0.695, k: 0.397, ls: '0' },
+  { id: 'shyness', bad: /[+\-()'&!?\/]/, badMsg: 'Esta tipografía no tiene algunos de los caracteres que escribiste: en el grabado se verían distintos o faltarían.', off: 0.02, label: 'Shyness', family: "'PP shyness', cursive", weight: 400, cap: 0.589, k: 0.537, ls: '0' },
+  { id: 'silverkids', bad: /[+]/, badMsg: 'Esta tipografía no tiene algunos de los caracteres que escribiste: en el grabado se verían distintos o faltarían.', off: -0.004, label: 'Silver Kids', family: "'PP silverkids', sans-serif", weight: 400, cap: 0.754, k: 0.439, ls: '0' },
+  { id: 'sundaybest', off: -0.105, label: 'Sunday Best', family: "'PP sundaybest', cursive", weight: 400, cap: 0.963, k: 0.728, ls: '0' },
+  { id: 'vogue', off: -0.091, label: 'Vogue', family: "'PP vogue', serif", weight: 400, cap: 0.667, k: 0.534, ls: '0', bad: /[^\x20-\x7E+\-()'&\/]|[+\-()'&\/]/, badMsg: 'Esta tipografía no tiene letras con tilde, ñ ni algunos signos (+ - ( ) \' & /): en el grabado se verían distintos o faltarían.' },
+  { id: 'waltograph', off: -0.169, label: 'Waltograph', family: "'PP waltograph', cursive", weight: 400, cap: 0.724, k: 0.461, ls: '0' },
+  { id: 'hoodson', off: -0.067, label: 'Hoodson Script', family: "'PP hoodson', cursive", weight: 400, cap: 0.762, k: 0.469, ls: '0', bad: /[0-9+().,\-]/, badMsg: 'Esta tipografía no tiene números ni signos (. , + - ( )): en el grabado se verían distintos o faltarían.' },
+  { id: 'keepon', off: -0.083, label: "Keep on Truckin'", family: "'PP keepon', cursive", weight: 400, cap: 0.753, k: 0.597, ls: '0', bad: /[^\x20-\x7E]/, badMsg: 'Esta tipografía no tiene letras con tilde ni ñ: en el grabado se verían distintas o faltarían.' },
+  { id: 'elephant', off: -0.016, label: 'Elephant', family: "'PP elephant', serif", weight: 400, cap: 0.729, k: 0.701, ls: '0' },
+  { id: 'arialblack', off: 0.038, label: 'Arial Black', family: "'PP arialblack', 'Arial Black', sans-serif", weight: 400, cap: 0.716, k: 0.691, ls: '0' }
+];
+
+const CZ_ORDER = ['arialblack','silverkids','sundaybest','shyness','keepon','waltograph','vogue','harland','hoodson','elephant'];
+const CZ_UPPER = { arialblack: true, silverkids: true, waltograph: true };
+CZ_FONTS.sort((a, b) => CZ_ORDER.indexOf(a.id) - CZ_ORDER.indexOf(b.id));
+CZ_FONTS.forEach((f, i) => { f.label = 'Tipografía ' + (i + 1); f.upper = !!CZ_UPPER[f.id]; });
+const CZ_SHAPES = {
+  circle: { label: 'Círculo', dim: { chico: '3,5 cm', grande: '5 cm' }, cm: { chico: 3.5, grande: 5 } },
+  bone: { label: 'Hueso', dim: { chico: '4 cm de largo', grande: '5,5 cm de largo' }, cm: { chico: 4, grande: 5.5 } }
+};
+const CZ_SIZE_LABEL = { chico: 'Chico', grande: 'Grande' };
+const PX_PER_CM = 50;
+
+function hexRgb(h){h=(h||'#000000').replace('#','');if(h.length===3)h=h.split('').map(c=>c+c).join('');return[parseInt(h.slice(0,2),16)||0,parseInt(h.slice(2,4),16)||0,parseInt(h.slice(4,6),16)||0]}
+function lum(hex){const c=hexRgb(hex).map(v=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4)});return 0.2126*c[0]+0.7152*c[1]+0.0722*c[2]}
+function contrast(a,b){const la=lum(a),lb=lum(b);return(Math.max(la,lb)+0.05)/(Math.min(la,lb)+0.05)}
+
+const cz = { shape:'circle', size:'chico', tone:0, textColor:'blanco', font:CZ_FONTS[0].id, name:'Toby', phone:'11 5555 5555' };
+const $ = (id) => document.getElementById(id);
+const tagOf = (c) => { const l = CZ_TAGS[c.shape]; return l[Math.min(c.tone, l.length - 1)]; };
+const textColorOf = (c) => CZ_TEXT_COLORS.find(t => t.id === c.textColor) || CZ_TEXT_COLORS[0];
+const fontOf = () => CZ_FONTS.find(f => f.id === cz.font) || CZ_FONTS[0];
+const wc = {};
+let cv = null;
+function emW(font, text) {
+  const key = font.id + '|' + text;
+  if (wc[key] != null) return wc[key];
+  let w = font.k * text.length;
+  try { cv = cv || document.createElement('canvas').getContext('2d'); cv.font = '100px ' + font.family; const m = cv.measureText(text).width / 100; if (m > 0) w = m; } catch (e) {}
+  wc[key] = w; return w;
+}
+function faceOf(c, side, widthPx) {
+  const sh = CZ_SHAPES[c.shape], tag = tagOf(c), tc = textColorOf(c);
+  const font = side === 'back' ? CZ_FONTS.find(f => f.id === 'arialblack') : (CZ_FONTS.find(f => f.id === c.font) || CZ_FONTS[0]);
+  const W = tag[2], H = tag[3];
+  const raw = (side === 'front' ? c.name : c.phone).trim();
+  const empty = raw === '';
+  const shown = empty ? (side === 'front' ? 'Nombre' : 'Teléfono') : raw;
+  const text = font.upper ? shown.toUpperCase() : shown;
+  const tbl = tag[c.size === 'chico' ? 7 : 8];
+  const em = emW(font, text), boxK = font.cap + 0.3;
+  const availW = (hF) => {
+    if (hF > tbl[tbl.length - 2]) return 0;
+    for (let i = 0; i < tbl.length - 2; i += 2) {
+      if (hF <= tbl[i + 2]) { const t = (hF - tbl[i]) / (tbl[i + 2] - tbl[i]); return tbl[i + 1] + Math.max(0, Math.min(1, t)) * (tbl[i + 3] - tbl[i + 1]); }
+    }
+    return tbl[tbl.length - 1];
+  };
+  let lo = 0, hi = 1.2 * W;
+  for (let i = 0; i < 28; i++) { const mid = (lo + hi) / 2; if (em * mid / W <= availW(boxK * mid / W)) lo = mid; else hi = mid; }
+  const fs = Math.max(6, lo);
+  const sc = widthPx / W;
+  const topPx = (tag[6] * H - font.off * fs) * sc;
+  return {
+    img: tag[1], text, label: side === 'front' ? 'Frente' : 'Dorso',
+    aria: 'Chapita ' + sh.label.toLowerCase() + ', ' + (side === 'front' ? 'frente' : 'dorso') + ': ' + text,
+    wrap: 'position:relative;width:' + Math.round(widthPx) + 'px;max-width:100%;line-height:0;filter:drop-shadow(0 10px 14px rgba(27,23,18,0.22))',
+    textStyle: 'position:absolute;left:' + (tag[5] * 100).toFixed(2) + '%;top:' + topPx.toFixed(1) + 'px;transform:translate(-50%,-50%);white-space:nowrap;line-height:1;pointer-events:none;font-family:' + font.family + ';font-weight:' + font.weight + ';font-size:' + (fs * sc).toFixed(1) + 'px;letter-spacing:' + font.ls + ';opacity:' + (empty ? 0.4 : 0.97) + ';' + tc.css
+  };
+}
+function esc(s){return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+function summaryData() {
+  const sh = CZ_SHAPES[cz.shape], font = fontOf(), tag = tagOf(cz);
+  return [
+    ['Forma', sh.label],
+    ['Tamaño', CZ_SIZE_LABEL[cz.size] + ' · ' + sh.dim[cz.size]],
+    ['Color', tag[0]],
+    ['Letra', font.label],
+    ['Letras', textColorOf(cz).name],
+    ['Frente', (font.upper ? cz.name.trim().toUpperCase() : cz.name.trim()) || '—'],
+    ['Dorso', (cz.phone.trim() || '—') + ' (Arial Black)']
+  ];
+}
+function summaryText() {
+  const d = summaryData();
+  return 'Chapita personalizada Para Perros\n' + d.map(r => r[0] + ': ' + r[1]).join('\n');
+}
+function render() {
+  const sh = CZ_SHAPES[cz.shape], tag = tagOf(cz), tcol = textColorOf(cz), font = fontOf();
+  const w = sh.cm[cz.size] * PX_PER_CM;
+  $('faces').innerHTML = ['front', 'back'].map(side => {
+    const f = faceOf(cz, side, w);
+    return '<div class="cz-face"><div style="' + f.wrap + '" role="img" aria-label="' + esc(f.aria) + '"><img src="' + f.img + '" alt="" style="display:block;width:100%;height:auto"><div style="' + f.textStyle + '">' + esc(f.text) + '</div></div><span class="cz-face-label">' + f.label + '</span></div>';
+  }).join('');
+  $('meta').textContent = sh.label + ' ' + tag[0] + ' · ' + CZ_SIZE_LABEL[cz.size] + ' (' + sh.dim[cz.size] + ')';
+  $('shapes').innerHTML = Object.keys(CZ_SHAPES).map(k => '<button type="button" class="opt ' + (cz.shape === k ? 'selected' : '') + '" data-shape="' + k + '" aria-pressed="' + (cz.shape === k) + '"><img src="' + CZ_TAGS[k][0][1] + '" alt="" style="height:50px;width:auto">' + CZ_SHAPES[k].label + '</button>').join('');
+  $('sizes').innerHTML = ['chico', 'grande'].map(k => '<button type="button" class="opt ' + (cz.size === k ? 'selected' : '') + '" data-size="' + k + '" aria-pressed="' + (cz.size === k) + '">' + CZ_SIZE_LABEL[k] + '<small>' + sh.dim[k] + '</small></button>').join('');
+  $('colors').innerHTML = CZ_TAGS[cz.shape].map((t, i) => '<button type="button" class="swatch ' + (cz.tone === i ? 'selected' : '') + '" data-tone="' + i + '" style="background-image:url(' + t[1] + ')" aria-label="' + esc(t[0]) + '" aria-pressed="' + (cz.tone === i) + '"></button>').join('');
+  $('colorName').textContent = tag[0];
+  const sample = (cz.name.trim() || 'Toby').slice(0, 7);
+  $('fonts').innerHTML = CZ_FONTS.map(f => '<button type="button" class="opt ' + (cz.font === f.id ? 'selected' : '') + '" data-font="' + f.id + '" aria-pressed="' + (cz.font === f.id) + '"><span class="fsample" style="font-family:' + f.family + ';font-weight:' + f.weight + ';letter-spacing:' + f.ls + (f.upper ? ';text-transform:uppercase' : '') + '">' + esc(sample) + '</span><small>' + f.label + '</small></button>').join('');
+  const bad = !!(font.bad && font.bad.test(cz.name));
+  $('fontWarn').hidden = !bad; $('fontWarn').textContent = bad ? (font.badMsg || '') : '';
+  $('tcolors').innerHTML = CZ_TEXT_COLORS.map(c => '<button type="button" class="swatch ' + (cz.textColor === c.id ? 'selected' : '') + '" data-tc="' + c.id + '" style="' + c.style + '" aria-label="' + c.name + '" aria-pressed="' + (cz.textColor === c.id) + '"></button>').join('');
+  $('tcName').textContent = tcol.name;
+  $('lowContrast').hidden = !(contrast(tag[4], tcol.rep) < 2.2);
+  $('sum').innerHTML = summaryData().map(r => '<dt>' + r[0] + '</dt><dd>' + esc(r[1]) + '</dd>').join('');
+  $('waBtn').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('¡Hola Para Perros! 🐾 Quiero esta chapita:\n\n' + summaryText().replace('Chapita personalizada Para Perros\n', '') + '\n\nQuedo atento/a para confirmar disponibilidad y coordinar el pago 🙌');
+}
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.shape) { cz.shape = b.dataset.shape; cz.tone = 0; }
+  else if (b.dataset.size) cz.size = b.dataset.size;
+  else if (b.dataset.tone) cz.tone = +b.dataset.tone;
+  else if (b.dataset.font) cz.font = b.dataset.font;
+  else if (b.dataset.tc) cz.textColor = b.dataset.tc;
+  else return;
+  render();
+});
+$('czName').addEventListener('input', (e) => { cz.name = e.target.value.slice(0, 14); render(); });
+$('czPhone').addEventListener('input', (e) => { cz.phone = e.target.value.slice(0, 18); render(); });
+$('copyBtn').addEventListener('click', () => {
+  const btn = $('copyBtn'), t = summaryText();
+  const ok = () => { btn.textContent = '✓ Copiado'; btn.classList.add('done'); setTimeout(() => { btn.textContent = 'Copiar resumen'; btn.classList.remove('done'); }, 1800); };
+  const fallback = () => { const ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) { prompt('Copiá este resumen:', t); } ta.remove(); };
+  (navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(t).then(ok).catch(fallback) : fallback());
+});
+render();
+try { if (document.fonts && document.fonts.load) Promise.all(CZ_FONTS.map(f => document.fonts.load('40px ' + f.family))).then(() => { for (const k in wc) delete wc[k]; render(); }); } catch (e) {}
+</script>
 </body>
 </html>
