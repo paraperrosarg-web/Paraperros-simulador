@@ -1,0 +1,3 @@
+Subir TODOS estos archivos juntos (index.html + fotos + tipografias) a la raiz del repositorio.
+No hay carpetas. Seleccionar todo con Ctrl+A y arrastrar a "Add file > Upload files".
+Confirmar con "Commit changes".
