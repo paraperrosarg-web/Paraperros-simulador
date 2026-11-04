@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Personalizá tu chapita | Para Perros</title>
+<meta name="description" content="Armá la chapita de tu perro: forma, tamaño, color, tipografía y texto, con vista previa al instante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'PP harland';src:url(fuente-harland.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP shyness';src:url(fuente-shyness.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP silverkids';src:url(fuente-silverkids.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP sundaybest';src:url(fuente-sundaybest.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP vogue';src:url(fuente-vogue.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP waltograph';src:url(fuente-waltograph.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP hoodson';src:url(fuente-hoodson.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP keepon';src:url(fuente-keepon.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP arialblack';src:url(fuente-arialblack.woff2) format('woff2');font-display:block}
+@font-face{font-family:'PP elephant';src:url(fuente-elephant.woff2) format('woff2');font-display:block}
+
+:root{
+  --terracota:#be6336; --terracota-dark:#a5522a; --mustard:#e4a936;
+  --sage:#77a399; --sage-dark:#5f8880; --ink:#1B1712; --ink-soft:#6B6155;
+  --paper:#FFFFFF; --paper-soft:#FBF7F0; --line:rgba(27,23,18,0.12);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;font-weight:700}
+.brand-script{font-family:'Fraunces',serif;font-weight:900;letter-spacing:-0.01em}
+.stripe-bar{height:12px;width:100%;background:linear-gradient(90deg,#d16a40 0 8.33%,#5ea69b 8.33% 16.66%,#e3a885 16.66% 25%,#d88355 25% 33.33%,#e4a839 33.33% 41.66%,#b3cbcc 41.66% 50%,#ca7e75 50% 58.33%,#e3a885 58.33% 66.66%,#5ea69b 66.66% 75%,#d16a40 75% 83.33%,#e4a839 83.33% 91.66%,#b3cbcc 91.66% 100%)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 28px;border-bottom:1px solid var(--line)}
+.top img{height:96px;width:auto}
+.back{color:var(--terracota-dark);font-weight:700;font-size:.9rem;text-decoration:none}
+.back:hover{color:var(--ink)}
+.field{margin-top:4px}
+.field label,.lbl-up{font-size:.72rem;color:var(--ink-soft);font-weight:700;text-transform:uppercase;letter-spacing:.03em;display:block;margin-bottom:7px}
+.field input[type="text"]{width:100%;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-family:inherit;font-size:.9rem;background:var(--paper-soft);color:var(--ink)}
+.field input:focus{outline:2px solid var(--terracota);outline-offset:1px}
+.cz{max-width:1180px;margin:0 auto;padding:40px 28px 70px}
+.cz-head h1{font-size:clamp(1.9rem,3vw,2.5rem);line-height:1.15}
+.cz-head p{margin:10px 0 0;color:var(--ink-soft);font-size:1rem;line-height:1.55;max-width:58ch}
+.cz-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:start;margin-top:28px}
+.cz-stage-wrap{position:sticky;top:16px}
+.cz-stage{background-color:#F3EDE2;background-image:radial-gradient(rgba(27,23,18,.1) 1.2px,transparent 1.2px);background-size:18px 18px;border:1px solid var(--line);border-radius:28px;padding:34px 24px 26px;min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.cz-faces{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;align-items:flex-end}
+.cz-face{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cz-face-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+.cz-meta{font-size:.82rem;color:var(--ink-soft);text-align:center;line-height:1.5;margin:0}
+.cz-disclaimer{margin:12px 4px 0;font-size:.74rem;color:var(--ink-soft);line-height:1.5}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px 18px 20px;margin-bottom:14px}
+.step-title{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;margin:0 0 14px}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:10px}
+.opts.wide{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.opt{border:2px solid var(--line);background:var(--paper);border-radius:14px;padding:10px 6px;min-height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:600;font-size:.78rem;color:var(--ink)}
+.opt:hover{border-color:var(--ink-soft)}
+.opt.selected{border-color:var(--ink);background:var(--paper-soft);box-shadow:0 0 0 1px var(--ink)}
+.opt small{font-weight:500;color:var(--ink-soft);font-size:.72rem}
+.opt .fsample{font-size:1.2rem;line-height:1.1;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:2px 4px}
+.swatches{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.swatch{width:44px;height:44px;border-radius:50%;border:2px solid rgba(27,23,18,.18);padding:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.swatch.selected{outline:3px solid var(--ink);outline-offset:3px}
+.picked{margin:10px 0 0;font-size:.8rem;color:var(--ink-soft)}
+.picked b{color:var(--ink)}
+.two-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.warn{margin-top:12px;background:#FBEDE7;border:1px solid var(--terracota);color:var(--terracota-dark);border-radius:12px;padding:10px 12px;font-size:.8rem;font-weight:600;line-height:1.45}
+.warn[hidden]{display:none}
+.cz-summary{background:var(--paper-soft);border:1px solid var(--line);border-radius:20px;padding:20px}
+.cz-summary h2{font-size:1.1rem;margin-bottom:12px}
+.cz-summary dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.84rem}
+.cz-summary dt{color:var(--ink-soft);font-weight:500}
+.cz-summary dd{margin:0;font-weight:600;text-align:right;word-break:break-word}
+.actions{display:grid;gap:10px;margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border:none;border-radius:999px;padding:12px 22px;font-weight:700;font-size:.92rem;text-decoration:none}
+.btn-main{background:var(--mustard);color:var(--ink)}
+.btn-main:hover{background:var(--terracota);color:#fff}
+.btn-wa{background:#1B7F43;color:#fff}
+.btn-wa:hover{background:#146534}
+.btn-ghost{background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--terracota-dark);color:var(--terracota-dark)}
+.btn.done{background:#3F6860;color:#fff}
+.cz-note{margin:12px 0 0;font-size:.76rem;color:var(--ink-soft);line-height:1.5}
+.how{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:.8rem;color:var(--ink-soft);line-height:1.55}
+.how b{color:var(--ink)}
+@media (max-width:900px){.cz-grid{grid-template-columns:1fr}.cz-stage-wrap{position:static}.cz{padding:28px 16px 50px}.top{padding:8px 16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="stripe-bar"></div>
+<header class="top">
+  <img src="891223ab0153f6ff6c684853f0afcedb.svg" alt="Para Perros">
+  <a class="back" href="https://paraperros.com.ar">← Volver a la tienda</a>
+</header>
+
+<main class="cz">
+  <div class="cz-head">
+    <h1 class="brand-script">Personalizá tu chapita</h1>
+    <p>Elegí forma, tamaño, colores y tipografía. La vista previa cambia al instante. Cuando te guste, copiá el resumen y cargalo al hacer tu compra, o mandanoslo por WhatsApp.</p>
+  </div>
+
+  <div class="cz-grid">
+    <div class="cz-stage-wrap">
+      <div class="cz-stage">
+        <div class="cz-faces" id="faces"></div>
+        <p class="cz-meta" id="meta"></p>
+      </div>
+      <p class="cz-disclaimer">La vista previa usa fotos de chapitas reales. Cada chapita es artesanal: el dibujo del color puede variar levemente de una a otra, y el grabado final puede verse un poco distinto.</p>
+    </div>
+
+    <div>
+      <section class="step"><h2 class="step-title"><span class="step-num">1</span> Forma</h2><div class="opts" id="shapes"></div></section>
+
+      <section class="step"><h2 class="step-title"><span class="step-num">2</span> Tamaño</h2><div class="opts wide" id="sizes"></div></section>
+
+      <section class="step"><h2 class="step-title"><span class="step-num">3</span> Color de la chapita <small style="font-weight:500;color:var(--ink-soft);font-size:.78rem">· fotos de chapitas reales</small></h2>
+        <div class="opts wide" id="groups" style="margin-bottom:12px"></div>
+        <div class="swatches" id="colors"></div>
+        <p class="picked"><span id="pickedLbl">Color elegido:</span> <b id="colorName"></b></p>
+      </section>
+
+      <section class="step"><h2 class="step-title"><span class="step-num">4</span> Nombre y teléfono</h2>
+        <div class="two-fields">
+          <div class="field"><label for="czName">Nombre (frente)</label><input type="text" id="czName" placeholder="Nombre de tu perro" value="Toby" maxlength="14" autocomplete="off"></div>
+          <div class="field"><label for="czPhone">Teléfono (dorso, siempre en Tipografía 1)</label><input type="text" id="czPhone" placeholder="11 5555 5555" value="11 5555 5555" maxlength="18" autocomplete="off"></div>
+        </div>
+        <p class="picked" id="limitHint">Hasta 14 caracteres en el nombre y 18 en el teléfono.</p>
+      </section>
+
+      <section class="step"><h2 class="step-title"><span class="step-num">5</span> Tipografía</h2>
+        <div class="opts" id="fonts"></div>
+        <div class="warn" id="fontWarn" role="status" hidden></div>
+      </section>
+
+      <section class="step"><h2 class="step-title"><span class="step-num">6</span> Color de las letras</h2>
+        <div class="swatches" id="tcolors"></div>
+        <p class="picked">Color de letras: <b id="tcName"></b></p>
+        <div class="warn" id="lowContrast" role="status" hidden>Ojo: el color de las letras es parecido al de la chapita y se va a leer con dificultad. Probá con otro color de letras.</div>
+      </section>
+
+      <section class="cz-summary" aria-label="Resumen de tu chapita">
+        <h2>Tu chapita</h2>
+        <dl id="sum"></dl>
+        <div class="actions">
+          <button type="button" class="btn btn-main" id="copyBtn">Copiar resumen</button>
+          <a class="btn btn-wa" id="waBtn" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+          <a class="btn btn-ghost" href="https://paraperros.com.ar">Ir a la tienda</a>
+        </div>
+        <div class="how"><b>Cómo seguir:</b> copiá el resumen, elegí la chapita en la tienda y pegalo en el campo de personalización antes de comprar. Producción en menos de 24hs. Esto no es un pago: coordinamos stock y medio de pago al confirmar.</div>
+      </section>
+    </div>
+  </div>
+</main>
+<div class="stripe-bar"></div>
+
+<script>
+const WHATSAPP = '5493465651267';
+const CZ_COLORS = [{"id":"blanco","name":"Blanco","code":"G01","circle":{"chico":["cc-g01.webp",307,303,0.5,0.5,[0.0293,0.8241,0.0586,0.8241,0.0879,0.8176,0.1173,0.8176,0.1466,0.8111,0.1759,0.8046,0.2052,0.798,0.2345,0.7915,0.2638,0.7785,0.2932,0.7655,0.3225,0.7524,0.3518,0.7394,0.3811,0.7264,0.4104,0.7068,0.4397,0.6808,0.4691,0.6678]],"grande":["cg-g01.webp",538,540,0.5,0.5,[0.0297,0.8755,0.0595,0.8717,0.0892,0.8717,0.119,0.868,0.1487,0.8643,0.1784,0.8569,0.2082,0.8532,0.2379,0.8457,0.2677,0.8383,0.2974,0.8271,0.3271,0.816,0.3569,0.8011,0.3866,0.79,0.4164,0.7751,0.4461,0.7565,0.4758,0.7379,0.5056,0.7193,0.5353,0.697,0.5651,0.6747]]},"hex":"#dae6d8","bone":{"chico":["hc-g01.webp",479,334,0.5,0.5284,[0.0292,0.6576,0.0585,0.6576,0.0877,0.6576,0.1169,0.6576,0.1461,0.6576,0.1754,0.6576,0.2046,0.6576,0.2338,0.6576,0.263,0.6576,0.2923,0.1441]],"grande":["hg-g01.webp",679,434,0.5,0.5196,[0.0295,0.7349,0.0589,0.732,0.0884,0.732,0.1178,0.732,0.1473,0.732,0.1767,0.732,0.2062,0.732,0.2356,0.732,0.2651,0.732,0.2946,0.1811,0.324,0.1429]]}},{"id":"azul","name":"Gris","code":"G03","circle":{"chico":["cc-g03.webp",361,348,0.5,0.5,[0.0305,0.8116,0.0609,0.8116,0.0914,0.8061,0.1219,0.795,0.1524,0.795,0.1828,0.7839,0.2133,0.7784,0.2438,0.7673,0.2742,0.7562,0.3047,0.7452,0.3352,0.7285,0.3657,0.7119,0.3961,0.6953,0.4266,0.6731,0.4571,0.651]],"grande":["cg-g03.webp",487,486,0.5,0.5,[0.0308,0.8727,0.0616,0.8686,0.0924,0.8686,0.1232,0.8645,0.154,0.8604,0.1848,0.8522,0.2156,0.848,0.2464,0.8398,0.2772,0.8316,0.308,0.8193,0.3388,0.807,0.3696,0.7947,0.4004,0.7782,0.4312,0.7618,0.462,0.7413,0.4928,0.7166,0.5236,0.6961,0.5544,0.6715,0.5852,0.6509]]},"hex":"#759cac","bone":{"chico":["hc-g03.webp",547,379,0.5,0.5211,[0.0293,0.6527,0.0585,0.6527,0.0878,0.6527,0.117,0.6527,0.1463,0.6527,0.1755,0.6527,0.2048,0.6527,0.234,0.6527,0.2633,0.6527]],"grande":["hg-g03.webp",687,437,0.5,0.5229,[0.0306,0.7293,0.0611,0.7293,0.0917,0.7293,0.1223,0.7293,0.1528,0.7293,0.1834,0.7293,0.214,0.7293,0.2445,0.7293,0.2751,0.2198,0.3057,0.1528,0.3362,0.1208]]}},{"id":"azul","name":"Azul","code":"G05","circle":{"chico":["cc-g05.webp",324,317,0.5,0.5,[0.0309,0.8179,0.0617,0.8179,0.0926,0.8117,0.1235,0.8056,0.1543,0.7994,0.1852,0.7932,0.216,0.787,0.2469,0.7747,0.2778,0.7623,0.3086,0.75,0.3395,0.7377,0.3704,0.7191,0.4012,0.7006,0.4321,0.6821,0.463,0.6636]],"grande":["cg-g05.webp",525,521,0.5,0.5,[0.0305,0.8552,0.061,0.8514,0.0914,0.8514,0.1219,0.8438,0.1524,0.84,0.1829,0.8362,0.2133,0.8286,0.2438,0.8171,0.2743,0.8095,0.3048,0.7981,0.3352,0.7867,0.3657,0.7714,0.3962,0.7562,0.4267,0.7371,0.4571,0.7219,0.4876,0.699,0.5181,0.68,0.5486,0.6571,0.579,0.6305]]},"hex":"#379ae9","bone":{"chico":["hc-g05.webp",518,360,0.5,0.5292,[0.0309,0.6506,0.0618,0.6506,0.0927,0.6506,0.1236,0.6506,0.1544,0.6506,0.1853,0.6506,0.2162,0.6506,0.2471,0.6506,0.278,0.6506,0.3089,0.1525]],"grande":["hg-g05.webp",699,449,0.5,0.5178,[0.03,0.731,0.0601,0.731,0.0901,0.731,0.1202,0.731,0.1502,0.731,0.1803,0.731,0.2103,0.731,0.2403,0.731,0.2704,0.2704,0.3004,0.1702,0.3305,0.133]]}},{"id":"verde-claro","name":"Verde claro","code":"G11","circle":{"chico":["cc-g11.webp",442,442,0.5,0.5,[0.0294,0.8213,0.0588,0.8167,0.0882,0.8167,0.1176,0.8122,0.1471,0.8077,0.1765,0.7986,0.2059,0.7941,0.2353,0.7851,0.2647,0.776,0.2941,0.767,0.3235,0.7534,0.3529,0.7398,0.3824,0.7262,0.4118,0.7127,0.4412,0.6946,0.4706,0.6719,0.5,0.6538]],"grande":["cg-g11.webp",569,569,0.5,0.5,[0.0299,0.8629,0.0598,0.8629,0.0896,0.8594,0.1195,0.8559,0.1494,0.8524,0.1793,0.8453,0.2091,0.8418,0.239,0.8313,0.2689,0.8207,0.2988,0.8102,0.3286,0.7996,0.3585,0.7891,0.3884,0.775,0.4183,0.761,0.4482,0.7434,0.478,0.7223,0.5079,0.7012,0.5378,0.6801,0.5677,0.6555]]},"hex":"#04e4a8","bone":{"chico":["hc-g11.webp",443,312,0.5,0.5176,[0.0293,0.6704,0.0587,0.6704,0.088,0.6704,0.1174,0.6704,0.1467,0.6704,0.1761,0.6704,0.2054,0.6704,0.2348,0.6704,0.2641,0.6704,0.2935,0.6704]],"grande":["hg-g11.webp",598,385,0.5,0.5234,[0.0301,0.7241,0.0602,0.7241,0.0903,0.7241,0.1204,0.7241,0.1505,0.7241,0.1806,0.7241,0.2107,0.7241,0.2408,0.7241,0.2709,0.7241,0.301,0.1856,0.3311,0.1388]]}},{"id":"verde-oscuro","name":"Verde oscuro","code":"G12","circle":{"chico":["cc-g12.webp",384,373,0.5,0.5,[0.0312,0.8099,0.0625,0.8047,0.0938,0.7995,0.125,0.7943,0.1562,0.7891,0.1875,0.7839,0.2188,0.7734,0.25,0.7682,0.2812,0.7526,0.3125,0.7422,0.3438,0.7266,0.375,0.7109,0.4062,0.6953,0.4375,0.6693]],"grande":["cg-g12.webp",536,531,0.5,0.5,[0.0299,0.8713,0.0597,0.8713,0.0896,0.8675,0.1194,0.8563,0.1493,0.8526,0.1791,0.8451,0.209,0.8377,0.2388,0.8302,0.2687,0.819,0.2985,0.8078,0.3284,0.7966,0.3582,0.7817,0.3881,0.7668,0.4179,0.7519,0.4478,0.7369,0.4776,0.7183,0.5075,0.6959,0.5373,0.6735]]},"hex":"#53ad8c","bone":{"chico":["hc-g12.webp",486,351,0.5,0.5228,[0.0309,0.6481,0.0617,0.644,0.0926,0.644,0.1235,0.644,0.1543,0.644,0.1852,0.644,0.216,0.644,0.2469,0.644,0.2778,0.644,0.3086,0.0844]],"grande":["hg-g12.webp",678,426,0.5,0.527,[0.0295,0.7389,0.059,0.7389,0.0885,0.7389,0.118,0.7389,0.1475,0.7389,0.177,0.7389,0.2065,0.7389,0.236,0.7389,0.2655,0.7389,0.295,0.1755,0.3245,0.1313]]}},{"id":"rosa-oscuro","name":"Rosa oscuro","code":"G17","circle":{"chico":["cc-g17.webp",425,425,0.5,0.5,[0.0306,0.8259,0.0612,0.8212,0.0918,0.8212,0.1224,0.8165,0.1529,0.8071,0.1835,0.8024,0.2141,0.7929,0.2447,0.7835,0.2753,0.7741,0.3059,0.76,0.3365,0.7459,0.3671,0.7318,0.3976,0.7129,0.4282,0.6941,0.4588,0.6753,0.4894,0.6518,0.52,0.6235]],"grande":["cg-g17.webp",425,425,0.5,0.5,[0.0306,0.8776,0.0612,0.8729,0.0918,0.8729,0.1224,0.8682,0.1529,0.8588,0.1835,0.8541,0.2141,0.8447,0.2447,0.84,0.2753,0.8259,0.3059,0.8165,0.3365,0.8024,0.3671,0.7882,0.3976,0.7741,0.4282,0.7553,0.4588,0.7365,0.4894,0.7176,0.52,0.6941,0.5506,0.6706,0.5812,0.6376]]},"hex":"#f22890","bone":{"chico":["hc-g17.webp",536,379,0.5,0.529,[0.0299,0.6549,0.0597,0.6549,0.0896,0.6549,0.1194,0.6549,0.1493,0.6549,0.1791,0.6549,0.209,0.6549,0.2388,0.6549,0.2687,0.6549]],"grande":["hg-g17.webp",702,446,0.5,0.5235,[0.0299,0.7279,0.0598,0.7279,0.0897,0.7279,0.1197,0.7279,0.1496,0.7279,0.1795,0.7279,0.2094,0.7279,0.2393,0.7279,0.2692,0.3661,0.2991,0.1638,0.3291,0.1268]]}},{"id":"rosa","name":"Rosa","code":"G21","circle":{"chico":["cc-g21.webp",399,385,0.5,0.5,[0.0301,0.8246,0.0602,0.8195,0.0902,0.8195,0.1203,0.8145,0.1504,0.8045,0.1805,0.7995,0.2105,0.7945,0.2406,0.7794,0.2707,0.7694,0.3008,0.7594,0.3308,0.7444,0.3609,0.7343,0.391,0.7143,0.4211,0.6992]],"grande":["cg-g21.webp",525,524,0.5,0.5,[0.0305,0.8743,0.061,0.8705,0.0914,0.8667,0.1219,0.8629,0.1524,0.8552,0.1829,0.8514,0.2133,0.8438,0.2438,0.8324,0.2743,0.8248,0.3048,0.8133,0.3352,0.7981,0.3657,0.7867,0.3962,0.7714,0.4267,0.7562,0.4571,0.7371,0.4876,0.7143,0.5181,0.6952,0.5486,0.6686]]},"hex":"#f074be","bone":{"chico":["hc-g21.webp",518,358,0.5,0.5265,[0.0309,0.6622,0.0618,0.6622,0.0927,0.6622,0.1236,0.6622,0.1544,0.6622,0.1853,0.6622,0.2162,0.6622,0.2471,0.6622,0.278,0.6622]],"grande":["hg-g21.webp",675,426,0.5,0.527,[0.0296,0.7274,0.0593,0.7274,0.0889,0.7274,0.1185,0.7274,0.1481,0.7274,0.1778,0.7274,0.2074,0.7274,0.237,0.7274,0.2667,0.7274,0.2963,0.1674,0.3259,0.1319]]}},{"id":"rosa-claro","name":"Rosa claro","code":"G22","circle":{"chico":["cc-g22.webp",417,408,0.5,0.5,[0.0312,0.8273,0.0624,0.8225,0.0935,0.8177,0.1247,0.8129,0.1559,0.8082,0.1871,0.7986,0.2182,0.789,0.2494,0.7746,0.2806,0.765,0.3118,0.7506,0.3429,0.7362,0.3741,0.717,0.4053,0.6978,0.4365,0.6739,0.4676,0.6499]],"grande":["cg-g22.webp",568,569,0.5,0.5,[0.0299,0.875,0.0599,0.8715,0.0898,0.868,0.1197,0.868,0.1496,0.8609,0.1796,0.8539,0.2095,0.8468,0.2394,0.8398,0.2694,0.8292,0.2993,0.8187,0.3292,0.8081,0.3592,0.794,0.3891,0.7799,0.419,0.7658,0.4489,0.7482,0.4789,0.7306,0.5088,0.7095,0.5387,0.6849,0.5687,0.6602]]},"hex":"#fa6ec9","bone":{"chico":["hc-g22.webp",545,386,0.5,0.535,[0.0294,0.6587,0.0587,0.655,0.0881,0.655,0.1174,0.655,0.1468,0.655,0.1761,0.655,0.2055,0.655,0.2349,0.655,0.2642,0.655,0.2936,0.655,0.3229,0.0679]],"grande":["hg-g22.webp",689,432,0.5,0.522,[0.0305,0.7271,0.061,0.7271,0.0914,0.7271,0.1219,0.7271,0.1524,0.7271,0.1829,0.7271,0.2134,0.7271,0.2438,0.7271,0.2743,0.2075,0.3048,0.1553,0.3353,0.0189]]}},{"id":"lila","name":"Lila","code":"G24","circle":{"chico":["cc-g24.webp",347,335,0.5,0.5,[0.0288,0.8156,0.0576,0.8156,0.0865,0.8098,0.1153,0.8098,0.1441,0.804,0.1729,0.7925,0.2017,0.7867,0.2305,0.7695,0.2594,0.7579,0.2882,0.7464,0.317,0.7406,0.3458,0.7233,0.3746,0.7118,0.4035,0.6945,0.4323,0.6772]],"grande":["cg-g24.webp",494,494,0.5,0.5,[0.0304,0.8765,0.0607,0.8725,0.0911,0.8684,0.1215,0.8644,0.1518,0.8603,0.1822,0.8522,0.2126,0.8482,0.2429,0.8401,0.2733,0.8279,0.3036,0.8158,0.334,0.8077,0.3644,0.7915,0.3947,0.7753,0.4251,0.7591,0.4555,0.7429,0.4858,0.7227,0.5162,0.7024,0.5466,0.6741,0.5769,0.6498]]},"hex":"#9095e2","bone":{"chico":["hc-g24.webp",497,361,0.5,0.5388,[0.0302,0.674,0.0604,0.674,0.0905,0.674,0.1207,0.674,0.1509,0.674,0.1811,0.674,0.2113,0.674,0.2414,0.674,0.2716,0.674,0.3018,0.674,0.332,0.163]],"grande":["hg-g24.webp",789,497,0.5,0.5201,[0.0304,0.7262,0.0608,0.7262,0.0913,0.7262,0.1217,0.7262,0.1521,0.7262,0.1825,0.7262,0.2129,0.7262,0.2433,0.7262,0.2738,0.2142,0.3042,0.1458,0.3346,0.1153]]}},{"id":"violeta","name":"Violeta","code":"G25","circle":{"chico":["cc-g25.webp",381,374,0.5,0.5,[0.0289,0.8215,0.0577,0.8215,0.0866,0.8163,0.1155,0.811,0.1444,0.8058,0.1732,0.7953,0.2021,0.79,0.231,0.7795,0.2598,0.769,0.2887,0.7638,0.3176,0.7585,0.3465,0.7428,0.3753,0.727,0.4042,0.706,0.4331,0.6955]],"grande":["cg-g25.webp",552,547,0.5,0.5,[0.0308,0.875,0.0616,0.875,0.0924,0.8678,0.1232,0.8569,0.154,0.8496,0.1848,0.8424,0.2156,0.8351,0.2464,0.8243,0.2772,0.8134,0.308,0.8025,0.3388,0.788,0.3696,0.7772,0.4004,0.7591,0.4312,0.7446,0.462,0.7264,0.4928,0.7083,0.5236,0.6866,0.5543,0.6612]]},"hex":"#7c5ad4","bone":{"chico":["hc-g25.webp",500,351,0.5,0.5342,[0.03,0.666,0.06,0.662,0.09,0.662,0.12,0.662,0.15,0.662,0.18,0.662,0.21,0.662,0.24,0.662,0.27,0.662]],"grande":["hg-g25.webp",731,460,0.5,0.525,[0.0301,0.7373,0.0602,0.7373,0.0903,0.7373,0.1204,0.7373,0.1505,0.7373,0.1806,0.7373,0.2107,0.7373,0.2408,0.7373,0.2709,0.2339,0.301,0.1573,0.3311,0.1218]]}}];
+const CZ_DESIGNS = [{"id":"fresia","name":"Fresia","bone":{"chico":["hc-fresia.webp",446,307,0.5,0.5195,[0.0291,0.6525,0.0583,0.6525,0.0874,0.6525,0.1166,0.6525,0.1457,0.6525,0.1749,0.6525,0.204,0.6525,0.2332,0.6525,0.2623,0.6525]],"grande":["hg-fresia.webp",782,497,0.5,0.5262,[0.0294,0.7353,0.0588,0.7353,0.0882,0.7353,0.1176,0.7353,0.1471,0.7353,0.1765,0.7353,0.2059,0.7353,0.2353,0.7353,0.2647,0.7353,0.2941,0.1854,0.3235,0.1419]]},"hex":"#813f46"},{"id":"marea","name":"Marea","bone":{"chico":["hc-marea.webp",496,336,0.5,0.5223,[0.0302,0.6512,0.0605,0.6512,0.0907,0.6512,0.121,0.6512,0.1512,0.6512,0.1815,0.6512,0.2117,0.6512,0.2419,0.6512]],"grande":["hg-marea.webp",741,470,0.5,0.5266,[0.0297,0.7328,0.0594,0.7328,0.0891,0.7328,0.1188,0.7328,0.1484,0.7328,0.1781,0.7328,0.2078,0.7328,0.2375,0.7328,0.2672,0.7328,0.2969,0.1741,0.3266,0.1336]]},"hex":"#61b0c0"},{"id":"polo","name":"Polo","bone":{"chico":["hc-polo.webp",509,352,0.5,0.527,[0.0295,0.6542,0.0589,0.6542,0.0884,0.6542,0.1179,0.6542,0.1473,0.6542,0.1768,0.6542,0.2063,0.6542,0.2358,0.6542,0.2652,0.6542]],"grande":["hg-polo.webp",717,458,0.5,0.5164,[0.0307,0.7322,0.0614,0.7294,0.0921,0.7294,0.1227,0.7294,0.1534,0.7294,0.1841,0.7294,0.2148,0.7294,0.2455,0.7294,0.2762,0.2078,0.3068,0.1548,0.3375,0.1018]]},"hex":"#385e66"},{"id":"grafito","name":"Grafito","bone":{"chico":["hc-grafito.webp",509,351,0.5,0.5256,[0.0295,0.6542,0.0589,0.6542,0.0884,0.6542,0.1179,0.6542,0.1473,0.6542,0.1768,0.6542,0.2063,0.6542,0.2358,0.6542,0.2652,0.6542]],"grande":["hg-grafito.webp",728,471,0.5,0.5212,[0.0302,0.7294,0.0604,0.7294,0.0907,0.7294,0.1209,0.7294,0.1511,0.7294,0.1813,0.7294,0.2115,0.7294,0.2418,0.7294,0.272,0.7294,0.3022,0.1772,0.3324,0.1387]]},"hex":"#314355"}];
+// Cada color trae una foto por forma y tamaño: [archivo, ancho, alto, centroX, centroY, tabla de área libre]
+const CZ_TAGS = {};
+['circle','bone'].forEach(k => { CZ_TAGS[k] = CZ_COLORS.map(c => [c.code, c[k].chico[0], c[k].chico[1], c[k].chico[2], c.hex, c[k].chico[3], c[k].chico[4], c[k].chico[5], c[k].grande[5]]); });
+const CZ_TEXT_COLORS = [
+  { id: 'blanco', name: 'Blanco', rep: '#FFFFFF', css: 'color:#FFFFFF', style: 'background:#FFFFFF' },
+  { id: 'negro', name: 'Negro', rep: '#1B1712', css: 'color:#1B1712', style: 'background:#1B1712' },
+  { id: 'dorado', name: 'Dorado', rep: '#C99A2E', css: 'color:#C99A2E;background:linear-gradient(135deg,#F7E58B,#D4A62A 45%,#F3D774 75%,#B8861B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent', style: 'background:linear-gradient(135deg,#F7E58B,#D4A62A 45%,#F3D774 75%,#B8861B)' }
+];
+const CZ_FONTS = [
+  { id: 'harland', off: -0.02, label: 'Harland Roselyn', family: "'PP harland', cursive", weight: 400, cap: 0.695, k: 0.397, ls: '0' },
+  { id: 'shyness', bad: /[+\-()'&!?\/]/, badMsg: 'Esta tipografía no tiene algunos de los caracteres que escribiste: en el grabado se verían distintos o faltarían.', off: 0.02, label: 'Shyness', family: "'PP shyness', cursive", weight: 400, cap: 0.589, k: 0.537, ls: '0' },
+  { id: 'silverkids', bad: /[+]/, badMsg: 'Esta tipografía no tiene algunos de los caracteres que escribiste: en el grabado se verían distintos o faltarían.', off: -0.004, label: 'Silver Kids', family: "'PP silverkids', sans-serif", weight: 400, cap: 0.754, k: 0.439, ls: '0' },
+  { id: 'sundaybest', off: -0.105, label: 'Sunday Best', family: "'PP sundaybest', cursive", weight: 400, cap: 0.963, k: 0.728, ls: '0' },
+  { id: 'vogue', off: -0.091, label: 'Vogue', family: "'PP vogue', serif", weight: 400, cap: 0.667, k: 0.534, ls: '0', bad: /[^\x20-\x7E+\-()'&\/]|[+\-()'&\/]/, badMsg: 'Esta tipografía no tiene letras con tilde, ñ ni algunos signos (+ - ( ) \' & /): en el grabado se verían distintos o faltarían.' },
+  { id: 'waltograph', off: -0.169, label: 'Waltograph', family: "'PP waltograph', cursive", weight: 400, cap: 0.724, k: 0.461, ls: '0' },
+  { id: 'hoodson', off: -0.067, label: 'Hoodson Script', family: "'PP hoodson', cursive", weight: 400, cap: 0.762, k: 0.469, ls: '0', bad: /[0-9+().,\-]/, badMsg: 'Esta tipografía no tiene números ni signos (. , + - ( )): en el grabado se verían distintos o faltarían.' },
+  { id: 'keepon', off: -0.083, label: "Keep on Truckin'", family: "'PP keepon', cursive", weight: 400, cap: 0.753, k: 0.597, ls: '0', bad: /[^\x20-\x7E]/, badMsg: 'Esta tipografía no tiene letras con tilde ni ñ: en el grabado se verían distintas o faltarían.' },
+  { id: 'elephant', off: -0.016, label: 'Elephant', family: "'PP elephant', serif", weight: 400, cap: 0.729, k: 0.701, ls: '0' },
+  { id: 'arialblack', off: 0.038, label: 'Arial Black', family: "'PP arialblack', 'Arial Black', sans-serif", weight: 400, cap: 0.716, k: 0.691, ls: '0' }
+];
+
+const CZ_ORDER = ['arialblack','silverkids','sundaybest','shyness','keepon','waltograph','vogue','harland','hoodson','elephant'];
+const CZ_UPPER = { arialblack: true, silverkids: true, waltograph: true };
+CZ_FONTS.sort((a, b) => CZ_ORDER.indexOf(a.id) - CZ_ORDER.indexOf(b.id));
+CZ_FONTS.forEach((f, i) => { f.label = 'Tipografía ' + (i + 1); f.upper = !!CZ_UPPER[f.id]; });
+const CZ_SHAPES = {
+  circle: { label: 'Círculo', dim: { chico: '3,5 cm', grande: '5 cm' }, cm: { chico: 3.5, grande: 5 } },
+  bone: { label: 'Hueso', dim: { chico: '4 cm de largo', grande: '7 × 4 cm' }, cm: { chico: 4, grande: 7 } }
+};
+const CZ_SIZE_LABEL = { chico: 'Chico', grande: 'Grande' };
+const PX_PER_CM = 50;
+
+function hexRgb(h){h=(h||'#000000').replace('#','');if(h.length===3)h=h.split('').map(c=>c+c).join('');return[parseInt(h.slice(0,2),16)||0,parseInt(h.slice(2,4),16)||0,parseInt(h.slice(4,6),16)||0]}
+function lum(hex){const c=hexRgb(hex).map(v=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4)});return 0.2126*c[0]+0.7152*c[1]+0.0722*c[2]}
+function contrast(a,b){const la=lum(a),lb=lum(b);return(Math.max(la,lb)+0.05)/(Math.min(la,lb)+0.05)}
+
+const cz = { group:'gloss', shape:'circle', size:'chico', tone:0, textColor:'blanco', font:CZ_FONTS[0].id, name:'Toby', phone:'11 5555 5555' };
+const $ = (id) => document.getElementById(id);
+const listOf = (c) => c.group === 'design' ? CZ_DESIGNS : CZ_COLORS;
+const isDesign = () => cz.group === 'design';
+const maxName = () => isDesign() ? (cz.size === 'chico' ? 10 : 20) : 14;
+const maxPhone = () => isDesign() ? (cz.size === 'chico' ? 10 : 20) : 18;
+const tagOf = (c) => { const L = listOf(c), col = L[Math.min(c.tone, L.length - 1)], p = col[c.shape][c.size]; return [c.group === 'design' ? col.name : col.code, p[0], p[1], p[2], col.hex, p[3], p[4], p[5], p[5]]; };
+const textColorOf = (c) => CZ_TEXT_COLORS.find(t => t.id === c.textColor) || CZ_TEXT_COLORS[0];
+const fontOf = () => CZ_FONTS.find(f => f.id === cz.font) || CZ_FONTS[0];
+const wc = {};
+let cv = null;
+function emW(font, text) {
+  const key = font.id + '|' + text;
+  if (wc[key] != null) return wc[key];
+  let w = font.k * text.length;
+  try { cv = cv || document.createElement('canvas').getContext('2d'); cv.font = '100px ' + font.family; const m = cv.measureText(text).width / 100; if (m > 0) w = m; } catch (e) {}
+  wc[key] = w; return w;
+}
+function faceOf(c, side, widthPx) {
+  const sh = CZ_SHAPES[c.shape], tag = tagOf(c), tc = textColorOf(c);
+  const font = side === 'back' ? CZ_FONTS.find(f => f.id === 'arialblack') : (CZ_FONTS.find(f => f.id === c.font) || CZ_FONTS[0]);
+  const W = tag[2], H = tag[3];
+  const raw = (side === 'front' ? c.name : c.phone).trim();
+  const empty = raw === '';
+  const shown = empty ? (side === 'front' ? 'Nombre' : 'Teléfono') : raw;
+  const text = font.upper ? shown.toUpperCase() : shown;
+  const tbl = tag[c.size === 'chico' ? 7 : 8];
+  const em = emW(font, text), boxK = font.cap + 0.3;
+  const availW = (hF) => {
+    if (hF > tbl[tbl.length - 2]) return 0;
+    for (let i = 0; i < tbl.length - 2; i += 2) {
+      if (hF <= tbl[i + 2]) { const t = (hF - tbl[i]) / (tbl[i + 2] - tbl[i]); return tbl[i + 1] + Math.max(0, Math.min(1, t)) * (tbl[i + 3] - tbl[i + 1]); }
+    }
+    return tbl[tbl.length - 1];
+  };
+  let lo = 0, hi = 1.2 * W;
+  for (let i = 0; i < 28; i++) { const mid = (lo + hi) / 2; if (em * mid / W <= availW(boxK * mid / W)) lo = mid; else hi = mid; }
+  const fs = Math.max(6, lo);
+  const sc = widthPx / W;
+  const topPx = (tag[6] * H - font.off * fs) * sc;
+  return {
+    img: tag[1], text, label: side === 'front' ? 'Frente' : 'Dorso',
+    aria: 'Chapita ' + sh.label.toLowerCase() + ', ' + (side === 'front' ? 'frente' : 'dorso') + ': ' + text,
+    wrap: 'position:relative;width:' + Math.round(widthPx) + 'px;max-width:100%;line-height:0;filter:drop-shadow(0 10px 14px rgba(27,23,18,0.22))',
+    textStyle: 'position:absolute;left:' + (tag[5] * 100).toFixed(2) + '%;top:' + topPx.toFixed(1) + 'px;transform:translate(-50%,-50%);white-space:nowrap;line-height:1;pointer-events:none;font-family:' + font.family + ';font-weight:' + font.weight + ';font-size:' + (fs * sc).toFixed(1) + 'px;letter-spacing:' + font.ls + ';opacity:' + (empty ? 0.4 : 0.97) + ';' + tc.css
+  };
+}
+function esc(s){return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+function summaryData() {
+  const sh = CZ_SHAPES[cz.shape], font = fontOf(), tag = tagOf(cz);
+  return [
+    ['Forma', sh.label],
+    ['Tamaño', CZ_SIZE_LABEL[cz.size] + ' · ' + sh.dim[cz.size]],
+    [isDesign() ? 'Diseño exclusivo' : 'Color', tag[0]],
+    ['Letra', font.label],
+    ['Letras', textColorOf(cz).name],
+    ['Frente', (font.upper ? cz.name.trim().toUpperCase() : cz.name.trim()) || '—'],
+    ['Dorso', (cz.phone.trim() || '—') + ' (Tipografía 1)']
+  ];
+}
+function summaryText() {
+  const d = summaryData();
+  return 'Chapita personalizada Para Perros\n' + d.map(r => r[0] + ': ' + r[1]).join('\n');
+}
+function render() {
+  if (isDesign()) { cz.shape = 'bone'; cz.font = 'arialblack'; cz.textColor = 'blanco'; }
+  cz.name = cz.name.slice(0, maxName()); cz.phone = cz.phone.slice(0, maxPhone());
+  const sh = CZ_SHAPES[cz.shape], tag = tagOf(cz), tcol = textColorOf(cz), font = fontOf();
+  const w = sh.cm[cz.size] * PX_PER_CM;
+  $('faces').innerHTML = ['front', 'back'].map(side => {
+    const f = faceOf(cz, side, w);
+    return '<div class="cz-face"><div style="' + f.wrap + '" role="img" aria-label="' + esc(f.aria) + '"><img src="' + f.img + '" alt="" style="display:block;width:100%;height:auto"><div style="' + f.textStyle + '">' + esc(f.text) + '</div></div><span class="cz-face-label">' + f.label + '</span></div>';
+  }).join('');
+  $('meta').textContent = sh.label + ' ' + tag[0] + ' · ' + CZ_SIZE_LABEL[cz.size] + ' (' + sh.dim[cz.size] + ')';
+  $('shapes').innerHTML = Object.keys(CZ_SHAPES).map(k => '<button type="button" class="opt ' + (cz.shape === k ? 'selected' : '') + '" data-shape="' + k + '"' + (isDesign() && k !== 'bone' ? ' disabled style="opacity:.4"' : '') + ' aria-pressed="' + (cz.shape === k) + '"><img src="' + CZ_TAGS[k][0][1] + '" alt="" style="height:50px;width:auto;filter:brightness(0)">' + CZ_SHAPES[k].label + '</button>').join('');
+  $('sizes').innerHTML = ['chico', 'grande'].map(k => '<button type="button" class="opt ' + (cz.size === k ? 'selected' : '') + '" data-size="' + k + '" aria-pressed="' + (cz.size === k) + '">' + CZ_SIZE_LABEL[k] + '<small>' + sh.dim[k] + '</small></button>').join('');
+  $('groups').innerHTML = [['gloss', 'Gloss'], ['design', 'Diseños exclusivos']].map(g => '<button type="button" class="opt ' + (cz.group === g[0] ? 'selected' : '') + '" data-group="' + g[0] + '" aria-pressed="' + (cz.group === g[0]) + '">' + g[1] + '</button>').join('');
+  $('colors').innerHTML = listOf(cz).map((t, i) => '<button type="button" class="swatch ' + (cz.tone === i ? 'selected' : '') + '" data-tone="' + i + '" style="background-image:url(' + t[isDesign() ? 'bone' : cz.shape].chico[0] + ')" aria-label="' + esc(isDesign() ? t.name : t.code) + '" aria-pressed="' + (cz.tone === i) + '"></button>').join('');
+  $('pickedLbl').textContent = isDesign() ? 'Diseño elegido:' : 'Color elegido:';
+  $('czName').maxLength = maxName(); $('czPhone').maxLength = maxPhone();
+  $('limitHint').textContent = 'Hasta ' + maxName() + ' caracteres en el nombre y ' + maxPhone() + ' en el teléfono.' + (isDesign() ? ' En los diseños exclusivos la tipografía es siempre la 1 y las letras son blancas.' : '');
+  $('colorName').textContent = tag[0];
+  const sample = (cz.name.trim() || 'Toby').slice(0, 7);
+  $('fonts').innerHTML = CZ_FONTS.map(f => '<button type="button" class="opt ' + (cz.font === f.id ? 'selected' : '') + '" data-font="' + f.id + '"' + (isDesign() && f.id !== 'arialblack' ? ' disabled style="opacity:.4"' : '') + ' aria-pressed="' + (cz.font === f.id) + '"><span class="fsample" style="font-family:' + f.family + ';font-weight:' + f.weight + ';letter-spacing:' + f.ls + (f.upper ? ';text-transform:uppercase' : '') + '">' + esc(sample) + '</span><small>' + f.label + '</small></button>').join('');
+  const bad = !!(font.bad && font.bad.test(cz.name));
+  $('fontWarn').hidden = !bad; $('fontWarn').textContent = bad ? (font.badMsg || '') : '';
+  $('tcolors').innerHTML = CZ_TEXT_COLORS.map(c => '<button type="button" class="swatch ' + (cz.textColor === c.id ? 'selected' : '') + '" data-tc="' + c.id + '"' + (isDesign() && c.id !== 'blanco' ? ' disabled' : '') + ' style="' + c.style + (isDesign() && c.id !== 'blanco' ? ';opacity:.35' : '') + '" aria-label="' + c.name + '" aria-pressed="' + (cz.textColor === c.id) + '"></button>').join('');
+  $('tcName').textContent = tcol.name;
+  $('lowContrast').hidden = isDesign() || !(contrast(tag[4], tcol.rep) < 2.2);
+  $('sum').innerHTML = summaryData().map(r => '<dt>' + r[0] + '</dt><dd>' + esc(r[1]) + '</dd>').join('');
+  $('waBtn').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('¡Hola Para Perros! 🐾 Quiero esta chapita:\n\n' + summaryText().replace('Chapita personalizada Para Perros\n', '') + '\n\nQuedo atento/a para confirmar disponibilidad y coordinar el pago 🙌');
+}
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.group) { cz.group = b.dataset.group; cz.tone = 0; }
+  else if (b.dataset.shape) { cz.shape = b.dataset.shape; cz.tone = 0; }
+  else if (b.dataset.size) cz.size = b.dataset.size;
+  else if (b.dataset.tone) cz.tone = +b.dataset.tone;
+  else if (b.dataset.font) cz.font = b.dataset.font;
+  else if (b.dataset.tc) cz.textColor = b.dataset.tc;
+  else return;
+  render();
+});
+$('czName').addEventListener('input', (e) => { cz.name = e.target.value.slice(0, maxName()); render(); });
+$('czPhone').addEventListener('input', (e) => { cz.phone = e.target.value.slice(0, maxPhone()); render(); });
+$('copyBtn').addEventListener('click', () => {
+  const btn = $('copyBtn'), t = summaryText();
+  const ok = () => { btn.textContent = '✓ Copiado'; btn.classList.add('done'); setTimeout(() => { btn.textContent = 'Copiar resumen'; btn.classList.remove('done'); }, 1800); };
+  const fallback = () => { const ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) { prompt('Copiá este resumen:', t); } ta.remove(); };
+  (navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(t).then(ok).catch(fallback) : fallback());
+});
+render();
+try { if (document.fonts && document.fonts.load) Promise.all(CZ_FONTS.map(f => document.fonts.load('40px ' + f.family))).then(() => { for (const k in wc) delete wc[k]; render(); }); } catch (e) {}
+</script>
+</body>
+</html>

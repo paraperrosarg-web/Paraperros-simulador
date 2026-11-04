@@ -1,3 +1,6 @@
-Subir TODOS estos archivos juntos (index.html + fotos + tipografias) a la raiz del repositorio.
-No hay carpetas. Seleccionar todo con Ctrl+A y arrastrar a "Add file > Upload files".
-Confirmar con "Commit changes".
+SIMULADOR DE CHAPITAS - PARA PERROS
+Subir TODOS los archivos de esta carpeta (sin carpetas) al repositorio de GitHub:
+Add file > Upload files > seleccionar todo > Commit changes.
+Antes borrar del repositorio los .webp viejos (los de los colores que ya no estan).
+Gloss: G01, G03, G05, G11, G12, G17, G21, G22, G24, G25. Disenos exclusivos (solo hueso): Fresia, Marea, Polo, Grafito. Archivos: cc/cg circulo chico/grande, hc/hg hueso chico/grande.
+Margen de grabado: 3 mm.
